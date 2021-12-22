@@ -239,7 +239,6 @@ template {
 /*main style*/
 html {
     font-size: 10px;
-    overflow-x: hidden;
 }
 
 body {
@@ -319,3 +318,50 @@ a:focus {
 }
 
 /*header*/
+.header {
+    background-color: #F9EFED;
+    width: 100%;
+}
+
+.nav__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 6rem;
+}
+
+.main__menu {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main__menu--item {
+    padding: 1rem 0.5rem;
+    margin-left: 3rem;
+    position: relative;
+}
+
+.main__menu--item:first-child {
+    margin-left: 0;
+}
+
+.main__menu--item::before {
+    content: "";
+    position: absolute;
+    left: -1rem;
+    top: calc(50% - 0.5rem);
+    width: 1rem;
+    height: 1rem;
+    background-color: #C18D7A;
+    border-radius: 50%;
+}
+
+.main__menu--link {
+    text-decoration: none;
+    font-weight: 500;
+    color: #000000;
+    font-size: 1.5rem;
+}
