@@ -1,5 +1,5 @@
 /*google foonts*/
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Quicksand:wght@300;400;500;600;700&display=swap");
 /*==================*/
 /*normalize css https://necolas.github.io/normalize.css/ */
 html {
@@ -242,7 +242,7 @@ html {
 }
 
 body {
-    font-family: "Ubuntu", sans-serif;
+    font-family: "Quicksand", sans-serif;
     font-size: 1.6rem;
     font-weight: 300;
     -webkit-font-smoothing: antialiased;
@@ -352,16 +352,34 @@ a:focus {
     content: "";
     position: absolute;
     left: -1rem;
-    top: calc(50% - 0.5rem);
-    width: 1rem;
-    height: 1rem;
+    top: calc(50% - 0.4rem);
+    width: 0.8rem;
+    height: 0.8rem;
     background-color: #C18D7A;
     border-radius: 50%;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s linear, opacity 0.3s linear;
+}
+
+.main__menu--item:hover {
+    cursor: pointer;
+}
+
+.main__menu--item:hover::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+.main__menu--item:hover a {
+    color: #C18D7A;
 }
 
 .main__menu--link {
     text-decoration: none;
     font-weight: 500;
     color: #000000;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    font-family: "Quicksand", sans-serif;
+    transition: color 0.3s linear;
 }
