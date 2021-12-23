@@ -1,0 +1,47 @@
+//*mixins*//
+@import "./mixin.scss";
+
+.intro{
+   width: 100%;
+   height: calc(100vh - 8rem);
+   background-color: $secondary-color;
+   position: relative;
+}
+
+
+
+
+.intro__asside{
+   position: absolute;
+   width: 0;
+   height: 0;
+   right: 2%;
+   bottom: 50%;
+   z-index: 1;
+}
+.social__menu{
+   margin: 0;
+   padding: 0;
+   list-style-type: none;
+   display: flex;
+   transform: rotate(90deg);
+   li{
+      margin-right: 2rem;
+      &:last-child{
+         margin-right: 0;
+      }
+      a{
+         text-decoration: none;
+         font-weight: 400;
+         color: $black;
+         font-size: 1.7rem;
+         font-family: $font-secondary;
+         transition: color 0.3s linear;
+      }
+      &:hover{
+         a{
+            color: $secondary-color-two;
+         }
+      }
+   }
+}

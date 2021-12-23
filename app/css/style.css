@@ -328,7 +328,11 @@ a:focus {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    height: 6rem;
+    height: 8rem;
+}
+
+.navbar__brand {
+    width: 9%;
 }
 
 .main__menu {
@@ -382,4 +386,50 @@ a:focus {
     font-size: 1.6rem;
     font-family: "Quicksand", sans-serif;
     transition: color 0.3s linear;
+}
+
+/*intro*/
+.intro {
+    width: 100%;
+    height: calc(100vh - 8rem);
+    background-color: #F9EFED;
+    position: relative;
+}
+
+.intro__asside {
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: 2%;
+    bottom: 50%;
+    z-index: 1;
+}
+
+.social__menu {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    transform: rotate(90deg);
+}
+
+.social__menu li {
+    margin-right: 2rem;
+}
+
+.social__menu li:last-child {
+    margin-right: 0;
+}
+
+.social__menu li a {
+    text-decoration: none;
+    font-weight: 400;
+    color: #000000;
+    font-size: 1.7rem;
+    font-family: "Quicksand", sans-serif;
+    transition: color 0.3s linear;
+}
+
+.social__menu li:hover a {
+    color: #C18D7A;
 }
