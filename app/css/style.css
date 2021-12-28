@@ -332,11 +332,16 @@ a:focus {
 }
 
 .navbar__brand {
-    width: 9%;
+    width: 15%;
+}
+
+.navbar__menu {
+    width: 85%;
 }
 
 .main__menu {
     display: flex;
+    justify-content: flex-end;
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -394,6 +399,53 @@ a:focus {
     height: calc(100vh - 8rem);
     background-color: #F9EFED;
     position: relative;
+}
+
+.intro__row {
+    width: 100%;
+    height: calc(100vh - 8rem);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro__slider--item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro__slider--content {
+    width: 30%;
+}
+
+.intro__slider--content h2 {
+    font-weight: 600;
+    color: #000000;
+    font-size: 3rem;
+    font-family: "Quicksand", sans-serif;
+    margin-bottom: 1.5rem;
+}
+
+.intro__slider--content p {
+    font-weight: 600;
+    color: #000000;
+    font-size: 1.6rem;
+    font-family: "Quicksand", sans-serif;
+}
+
+.intro__slider--img {
+    width: 70%;
+    margin-left: 0.5rem;
+}
+
+.main__title {
+    font-weight: 700;
+    color: #000000;
+    font-size: 5.5rem;
+    font-family: "Quicksand", sans-serif;
+    margin-bottom: 1.5rem;
 }
 
 .intro__asside {

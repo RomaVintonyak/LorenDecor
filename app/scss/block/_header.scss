@@ -13,13 +13,14 @@
    height: 8rem;
 }
 .navbar__brand{
-   width: 9%;
+   width: 15%;
 }
 .navbar__menu{
-
+   width: 85%;
 }
 .main__menu{
    display: flex;
+   justify-content: flex-end;
    list-style-type: none;
    padding: 0;
    margin: 0;
