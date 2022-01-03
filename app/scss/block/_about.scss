@@ -1,0 +1,92 @@
+//*mixins*//
+@import "./mixin.scss";
+
+.about{
+   position: relative;
+}
+.aside__buttons{
+   position: absolute;
+   top: 0;
+   right: 2%;
+   z-index: 15;
+   background-color: $secondary-color;
+   border-bottom-left-radius: 2rem;
+   border-top-right-radius: 2rem;
+   a{
+      display: block;
+      text-decoration: none;
+      padding: 1.5rem;
+      border-bottom: 1px solid;
+      border-bottom-color: rgba($main-color-one, 0.3);
+      i{
+         color: rgba($main-color-one, 0.5);
+         transition: color 0.2s linear;
+      }
+      &:hover{
+         i{
+            color: rgba($main-color-one, 1);
+         }
+      }
+      &:last-child{
+         border-bottom: 0;
+         border-bottom-color: transparent;
+      }
+   }
+}
+.about__row{
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
+   &--text{
+      width: 40%;
+      h2{
+         font-weight: 600;
+         color: $black;
+         font-size: 3rem;
+         font-family: $font-secondary;
+         margin-bottom: 1.5rem;
+      }
+      p{
+         font-weight: 400;
+         color: $black;
+         font-size: 1.6rem;
+         font-family: $font-secondary;
+         margin-bottom: 1rem;
+         &:last-child{
+            margin-bottom: 0;
+         }
+      }
+   }
+   &--img{
+      width: 45%;
+      position: relative;
+      &::before{
+         content: "";
+         display: block;
+         width: 50%;
+         height: 8rem;
+         background-color: $main-color-one;
+         position: absolute;
+         z-index: 1;
+         top: 0;
+         right: 0;
+      }
+      &::after{
+         content: "";
+         display: block;
+         width: 50%;
+         height: 8rem;
+         background-color: $main-color-one;
+         position: absolute;
+         z-index: 1;
+         bottom: -47rem;
+         left: -4rem;
+      }
+      img{
+         position: absolute;
+         z-index: 2;
+         top: 4rem;
+         left: -2rem;
+      }
+   }
+}

@@ -404,20 +404,27 @@ a:focus {
 .intro__row {
     width: 100%;
     height: calc(100vh - 8rem);
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  /*overflow: hidden;*/
+    display: table;
+    padding: 3rem 0;
+  /*display: flex;
+   justify-content: center;
+   align-items: center;*/
+}
+
+.intro__slider {
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .intro__slider--item {
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: center;
 }
 
 .intro__slider--content {
-    width: 30%;
+    width: 45%;
 }
 
 .intro__slider--content h2 {
@@ -436,8 +443,8 @@ a:focus {
 }
 
 .intro__slider--img {
-    width: 70%;
-    margin-left: 0.5rem;
+  /*width: 70%;*/
+    margin-left: 3rem;
 }
 
 .main__title {
@@ -484,4 +491,107 @@ a:focus {
 
 .social__menu li:hover a {
     color: #C18D7A;
+}
+
+/*about*/
+.about {
+    position: relative;
+}
+
+.aside__buttons {
+    position: absolute;
+    top: 0;
+    right: 2%;
+    z-index: 15;
+    background-color: #F9EFED;
+    border-bottom-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+}
+
+.aside__buttons a {
+    display: block;
+    text-decoration: none;
+    padding: 1.5rem;
+    border-bottom: 1px solid;
+    border-bottom-color: rgba(189, 111, 81, 0.3);
+}
+
+.aside__buttons a i {
+    color: rgba(189, 111, 81, 0.5);
+    transition: color 0.2s linear;
+}
+
+.aside__buttons a:hover i {
+    color: #bd6f51;
+}
+
+.aside__buttons a:last-child {
+    border-bottom: 0;
+    border-bottom-color: transparent;
+}
+
+.about__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.about__row--text {
+    width: 40%;
+}
+
+.about__row--text h2 {
+    font-weight: 600;
+    color: #000000;
+    font-size: 3rem;
+    font-family: "Quicksand", sans-serif;
+    margin-bottom: 1.5rem;
+}
+
+.about__row--text p {
+    font-weight: 400;
+    color: #000000;
+    font-size: 1.6rem;
+    font-family: "Quicksand", sans-serif;
+    margin-bottom: 1rem;
+}
+
+.about__row--text p:last-child {
+    margin-bottom: 0;
+}
+
+.about__row--img {
+    width: 45%;
+    position: relative;
+}
+
+.about__row--img::before {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 8rem;
+    background-color: #BD6F51;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+}
+
+.about__row--img::after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 8rem;
+    background-color: #BD6F51;
+    position: absolute;
+    z-index: 1;
+    bottom: -47rem;
+    left: -4rem;
+}
+
+.about__row--img img {
+    position: absolute;
+    z-index: 2;
+    top: 4rem;
+    left: -2rem;
 }

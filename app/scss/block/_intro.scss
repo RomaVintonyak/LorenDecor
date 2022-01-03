@@ -10,19 +10,27 @@
 .intro__row{
    width: 100%;
    height: calc(100vh - 8rem);
-   overflow: hidden;
-   display: flex;
+   /*overflow: hidden;*/
+   display: table;
+   padding: 3rem 0;
+   /*display: flex;
    justify-content: center;
-   align-items: center;
+   align-items: center;*/
 }
+
+
 .intro__slider{
+   display:table-cell;
+   vertical-align:middle;
    &--item{
-      display: flex;
+      
+     display: flex!important;
       align-items: center;
       justify-content: center;
    }
    &--content{
-      width: 30%;
+      
+      width: 45%;
       h2{
          font-weight: 600;
          color: $black;
@@ -38,10 +46,13 @@
       }
    }
    &--img{
-      width: 70%;
-      margin-left: 0.5rem;
+      
+      /*width: 70%;*/
+      margin-left: 3rem;
    }
 }
+
+
 .main__title{
    font-weight: 700;
    color: $black;
@@ -49,6 +60,8 @@
    font-family: $font-secondary;
    margin-bottom: 1.5rem;
 }
+
+
 
 .intro__asside{
    position: absolute;
