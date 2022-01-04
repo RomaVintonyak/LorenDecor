@@ -54,3 +54,13 @@ a {
 @import "block/intro.scss";
 /*about*/
 @import 'block/about.scss';
+/*services*/
+@import 'block/services.scss';
+/*gallery*/
+@import 'block/gallery.scss';
+
+/*==============vendor=============*/
+/*lightbox gallery*/
+@import "vendor/lightbox.scss";
+/*slickslider*/
+@import "vendor/slick.scss"

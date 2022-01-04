@@ -1,0 +1,12 @@
+//*mixins*//
+@import "./mixin.scss";
+
+.gallery__row{
+   h2{
+      font-weight: 600;
+      color: $black;
+      font-size: 3rem;
+      font-family: $font-secondary;
+      margin-bottom: 2rem;
+   }
+}
