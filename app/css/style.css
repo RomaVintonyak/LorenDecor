@@ -676,12 +676,58 @@ a:focus {
 }
 
 .gallery__slider a {
-    opacity: 0.65;
+    opacity: 0.7;
     transition: opacity 0.3s linear;
 }
 
 .gallery__slider a:hover {
     opacity: 1;
+}
+
+/*footer*/
+.footer__social {
+    background-color: rgba(189, 111, 81, 0.7);
+    padding: 1.5rem 0;
+}
+
+.footer__social--content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer__social--content h4 {
+    font-weight: 600;
+    color: #000000;
+    font-size: 1.7rem;
+    font-family: "Quicksand", sans-serif;
+}
+
+.social__link a {
+    text-decoration: none;
+    margin-right: 1rem;
+    display: inline-block;
+    padding: 0.5rem;
+    transition: background-color 0.3s linear;
+}
+
+.social__link a:last-child {
+    margin-right: 0;
+}
+
+.social__link a i {
+    color: #ffffff;
+    font-size: 1.7rem;
+    transition: color 0.3s linear;
+}
+
+.social__link a:hover {
+    cursor: pointer;
+    background-color: #ffffff;
+}
+
+.social__link a:hover i {
+    color: #BD6F51;
 }
 
 /*==============vendor=============*/

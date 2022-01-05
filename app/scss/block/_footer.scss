@@ -1,0 +1,42 @@
+//*mixins*//
+@import "./mixin.scss";
+
+.footer__social{
+   background-color: rgba($main-color-one, 0.7);
+   padding: 1.5rem 0;
+   &--content{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      h4{
+         font-weight: 600;
+         color: $black;
+         font-size: 1.7rem;
+         font-family: $font-secondary; 
+      }
+   }
+}
+.social__link{
+   a{
+      text-decoration: none;
+      margin-right: 1rem;
+      display: inline-block;
+      padding: 0.5rem;
+      transition: background-color 0.3s linear;
+      &:last-child{
+         margin-right: 0; 
+      }
+      i{
+         color: $white;
+         font-size: 1.7rem;
+         transition: color 0.3s linear;
+      }
+      &:hover{
+         cursor: pointer;
+         background-color: $white;
+         i{
+            color: $main-color-one;
+         }
+      }
+   }
+}
