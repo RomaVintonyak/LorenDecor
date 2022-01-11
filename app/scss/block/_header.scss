@@ -3,7 +3,15 @@
 
 .header{
    background-color: $secondary-color;
-   width: 100%;  
+   width: 100%; 
+   transition: background-color 0.4s linear;
+}
+.header__fixed{
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 150;
+   background-color: $main-color-one;
 }
 .nav__menu{
    display: flex;

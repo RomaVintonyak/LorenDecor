@@ -1,5 +1,19 @@
 jQuery(document).ready(function () {
   "use script";
+  //waves effect
+  Waves.attach(".waves");
+  Waves.init();
+  //fixed header
+  var header = $("#header");
+  var headerHeight = header.innerHeight();
+  $(window).on("scroll", function(){
+    if($(this).scrollTop() > headerHeight){
+      header.addClass("header__fixed");
+    }
+    else{
+      header.removeClass("header__fixed");
+    }
+  });
   //box slider intro
   $('#introSlider').boxSlider({
     effect: 'scrollHorz',
