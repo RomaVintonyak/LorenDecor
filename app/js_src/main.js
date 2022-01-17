@@ -5,7 +5,6 @@ jQuery(document).ready(function () {
   Waves.init();
   //fixed header
   var header = $("#header");
-  var headerHeight = header.innerHeight();
   $(window).on("scroll", function(){
     if($(this).scrollTop() > 2){
       header.addClass("header__fixed");
@@ -13,6 +12,31 @@ jQuery(document).ready(function () {
     else{
       header.removeClass("header__fixed");
     }
+  });
+  //modal window
+  var mOpen = $("[data-info]");
+  var mClose = $(".modal__close");
+  var mMask = $(".modal__mask");
+  var mWindow = $("#modal");
+  mOpen.on("click", function(event){
+    event.preventDefault();
+    mWindow.addClass("modal__open");
+    $("body").css({"overflow" : "hidden"});
+  });
+  mClose.on("click", function(event){
+    event.preventDefault();
+    mWindow.removeClass("modal__open");
+    $("body").css({"overflow" : "scroll"});
+    $("body").removeAttr("style");
+  });
+  mMask.on("click", function(event){
+    event.preventDefault();
+    mWindow.removeClass("modal__open");
+    $("body").css({"overflow" : "scroll"});
+    $("body").removeAttr("style");
+  });
+  $(".modal__content").on("click", function(event){
+    event.stopPropagation();
   });
   //box slider intro
   $('#introSlider').boxSlider({
