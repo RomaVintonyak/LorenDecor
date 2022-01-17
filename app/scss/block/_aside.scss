@@ -1,0 +1,33 @@
+//*mixins*//
+@import "./mixin.scss";
+
+.aside__buttons {
+   position: sticky;
+   width: 4.9rem;
+   top: 15vh;
+   left: 2%;
+   z-index: 15;
+   background-color: $secondary-color;
+   border-bottom-left-radius: 2rem;
+   border-top-right-radius: 2rem;
+   a {
+      display: block;
+      text-decoration: none;
+      padding: 1.5rem;
+      border-bottom: 1px solid;
+      border-bottom-color: rgba($main-color-one, 0.3);
+      i {
+         color: rgba($main-color-one, 0.5);
+         transition: color 0.2s linear;
+      }
+      &:hover {
+         i {
+            color: rgba($main-color-one, 1);
+         }
+      }
+      &:last-child {
+         border-bottom: 0;
+         border-bottom-color: transparent;
+      }
+   }
+}

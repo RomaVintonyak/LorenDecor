@@ -7,7 +7,7 @@ jQuery(document).ready(function () {
   var header = $("#header");
   var headerHeight = header.innerHeight();
   $(window).on("scroll", function(){
-    if($(this).scrollTop() > headerHeight){
+    if($(this).scrollTop() > 2){
       header.addClass("header__fixed");
     }
     else{
