@@ -19,7 +19,14 @@
   <meta http-equiv="x-rim-auto-match" content="none" />
   <title>Loren&commat; &mdash; Wedding Decor Company</title>
 </head>
-<body>
+<body style="overflow-y: hidden;">
+<!--preloader animation-->
+<section id="loader" class="loader">
+  <div class="loader__wraper">
+    <img src="img/loader/loader.gif" alt="heart">
+    <p>Loading...</p>
+  </div><!--/.loader__wraper-->
+</section><!--/.loader-->
 <!--main page-->
 <main id="main" class="main">
   <!--header-->
@@ -183,7 +190,12 @@
     <div class="container">
       <div class="services__row">
         <div class="services__col services__col--img">
-          <img src="img/intro/5.jpeg" alt="wedding" class="img">
+          <div class="services__slider" id="servicesSlider">
+            <img src="img/services/1.jpg" alt="wedding" class="img">
+            <img src="img/services/2.jpg" alt="wedding" class="img">
+            <img src="img/services/3.jpg" alt="wedding" class="img">
+            <img src="img/services/4.jpg" alt="wedding" class="img">
+          </div>
         </div><!--/.img-->
         <div class="services__col services__col--text">
           <h2>Ми пропонуємо</h2>

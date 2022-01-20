@@ -1,3 +1,14 @@
+//preloader 
+$(window).on("load", function () {
+  "use script";
+  var loader = $("#loader");
+  var timeDelay = 2500;
+  setTimeout(function () {
+    $("body").css({ "overflow-y": "scroll" });
+    $("body").removeAttr("style");
+    loader.addClass("loader--done");
+  }, timeDelay);
+});
 jQuery(document).ready(function () {
   "use script";
   //fixed header
@@ -39,14 +50,14 @@ jQuery(document).ready(function () {
   var topBtn = $("#topBtn");
   var introH = $("#intro").height();
   topBtn.fadeOut(800);
-  $(window).on("scroll", function(){
-    if($(this).scrollTop() > (introH)){
+  $(window).on("scroll", function () {
+    if ($(this).scrollTop() > (introH)) {
       topBtn.fadeIn(1500);
-    }else{
+    } else {
       topBtn.fadeOut(1500);
     }
   });
-  topBtn.on("click", function(event){
+  topBtn.on("click", function (event) {
     event.preventDefault();
     $("html, body").animate({
       scrollTop: 0
@@ -65,6 +76,30 @@ jQuery(document).ready(function () {
     timeout: 3000,
     perspective: 1000,
     autoScroll: true
+  });
+  //services slider
+  var sSlider = $("#servicesSlider");
+  sSlider.slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    zIndex: 2,
+    dots: false,
+    arrows: false,
+    swipe: false,
+    touchMove: false,
+    focusOnSelect: false,
+    fade: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          swipe: true,
+          touchMove: true,
+        },
+      },
+    ],
   });
   //gallery lightbox options
   lightbox.option({
