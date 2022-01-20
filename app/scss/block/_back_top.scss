@@ -1,0 +1,80 @@
+//*mixins*//
+@import "./mixin.scss";
+
+.back__top {
+   position: fixed;
+   bottom: 2%;
+   right: 2%;
+   z-index: 15;
+   padding: 1.6rem;
+   background-color: $secondary-color-two;
+   border-bottom-left-radius: 1.5rem;
+   border-top-right-radius: 1.5rem;
+   button {
+      border: none;
+      background-color: transparent;
+      padding: 0;
+      &:focus {
+         outline: none;
+      }
+      &:active {
+         outline: none;
+      }
+      i {
+         font-size: 1.7rem;
+         color: $secondary-color;
+      }
+   }
+   &:hover {
+      cursor: pointer;
+      button {
+         cursor: pointer;
+      }
+   }
+}
+@keyframes hvr-icon-up {
+   0%,
+   50%,
+   100% {
+      transform: translateY(0);
+   }
+   25%,
+   75% {
+      transform: translateY(-6px);
+   }
+}
+/* Icon Up */
+.hvr-icon-up {
+   -webkit-transform: perspective(1px) translateZ(0);
+   transform: perspective(1px) translateZ(0);
+   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.hvr-icon-up {
+   .hvr-icon {
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+   }
+}
+.hvr-icon-up {
+   &:hover {
+      .hvr-icon {
+         animation-name: hvr-icon-up;
+         animation-duration: 0.8s;
+         animation-timing-function: ease-out;
+      }
+   }
+   &:focus {
+      .hvr-icon {
+         animation-name: hvr-icon-up;
+         animation-duration: 0.8s;
+         animation-timing-function: ease-out;
+      }
+   }
+   &:active {
+      .hvr-icon {
+         animation-name: hvr-icon-up;
+         animation-duration: 0.8s;
+         animation-timing-function: ease-out;
+      }
+   }
+}

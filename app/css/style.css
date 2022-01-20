@@ -236,10 +236,6 @@ template {
     }
 }
 
-.no__scroll {
-    overflow: hidden !important;
-}
-
 /*main style*/
 html {
     font-size: 10px;
@@ -281,6 +277,11 @@ a:focus {
 }
 
 /*==============block=============*/
+/*main*/
+.main {
+    position: relative;
+}
+
 /*container*/
 .container {
     max-width: 1340px;
@@ -978,6 +979,108 @@ a:focus {
 
 .text__social a:hover i {
     color: #BD6F51;
+}
+
+/*back top*/
+.back__top {
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+    z-index: 15;
+    padding: 1.6rem;
+    background-color: #C18D7A;
+    border-bottom-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+}
+
+.back__top button {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+}
+
+.back__top button:focus {
+    outline: none;
+}
+
+.back__top button:active {
+    outline: none;
+}
+
+.back__top button i {
+    font-size: 1.7rem;
+    color: #F9EFED;
+}
+
+.back__top:hover {
+    cursor: pointer;
+}
+
+.back__top:hover button {
+    cursor: pointer;
+}
+
+@-webkit-keyframes hvr-icon-up {
+    0%,
+  50%,
+  100% {
+        transform: translateY(0);
+    }
+
+    25%,
+  75% {
+        transform: translateY(-6px);
+    }
+}
+
+@keyframes hvr-icon-up {
+    0%,
+  50%,
+  100% {
+        transform: translateY(0);
+    }
+
+    25%,
+  75% {
+        transform: translateY(-6px);
+    }
+}
+
+/* Icon Up */
+.hvr-icon-up {
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+.hvr-icon-up .hvr-icon {
+    transform: translateZ(0);
+}
+
+.hvr-icon-up:hover .hvr-icon {
+    -webkit-animation-name: hvr-icon-up;
+    animation-name: hvr-icon-up;
+    -webkit-animation-duration: 0.8s;
+    animation-duration: 0.8s;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+}
+
+.hvr-icon-up:focus .hvr-icon {
+    -webkit-animation-name: hvr-icon-up;
+    animation-name: hvr-icon-up;
+    -webkit-animation-duration: 0.8s;
+    animation-duration: 0.8s;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+}
+
+.hvr-icon-up:active .hvr-icon {
+    -webkit-animation-name: hvr-icon-up;
+    animation-name: hvr-icon-up;
+    -webkit-animation-duration: 0.8s;
+    animation-duration: 0.8s;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
 }
 
 /*==============vendor=============*/

@@ -1,15 +1,12 @@
 jQuery(document).ready(function () {
   "use script";
-  //waves effect
-  Waves.attach(".waves");
-  Waves.init();
   //fixed header
   var header = $("#header");
-  $(window).on("scroll", function(){
-    if($(this).scrollTop() > 2){
+  $(window).on("scroll", function () {
+    if ($(this).scrollTop() > 2) {
       header.addClass("header__fixed");
     }
-    else{
+    else {
       header.removeClass("header__fixed");
     }
   });
@@ -18,26 +15,46 @@ jQuery(document).ready(function () {
   var mClose = $(".modal__close");
   var mMask = $(".modal__mask");
   var mWindow = $("#modal");
-  mOpen.on("click", function(event){
+  mOpen.on("click", function (event) {
     event.preventDefault();
     mWindow.addClass("modal__open");
-    $("body").css({"overflow" : "hidden"});
+    $("body").css({ "overflow": "hidden" });
   });
-  mClose.on("click", function(event){
+  mClose.on("click", function (event) {
     event.preventDefault();
     mWindow.removeClass("modal__open");
-    $("body").css({"overflow" : "scroll"});
+    $("body").css({ "overflow": "scroll" });
     $("body").removeAttr("style");
   });
-  mMask.on("click", function(event){
+  mMask.on("click", function (event) {
     event.preventDefault();
     mWindow.removeClass("modal__open");
-    $("body").css({"overflow" : "scroll"});
+    $("body").css({ "overflow": "scroll" });
     $("body").removeAttr("style");
   });
-  $(".modal__content").on("click", function(event){
+  $(".modal__content").on("click", function (event) {
     event.stopPropagation();
   });
+  //back top button
+  var topBtn = $("#topBtn");
+  var introH = $("#intro").height();
+  topBtn.fadeOut(800);
+  $(window).on("scroll", function(){
+    if($(this).scrollTop() > (introH)){
+      topBtn.fadeIn(1500);
+    }else{
+      topBtn.fadeOut(1500);
+    }
+  });
+  topBtn.on("click", function(event){
+    event.preventDefault();
+    $("html, body").animate({
+      scrollTop: 0
+    }, 2000, "swing");
+  });
+  //waves effect
+  Waves.attach(".waves");
+  Waves.init();
   //box slider intro
   $('#introSlider').boxSlider({
     effect: 'scrollHorz',
