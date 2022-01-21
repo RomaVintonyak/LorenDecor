@@ -66,6 +66,15 @@ jQuery(document).ready(function () {
   //waves effect
   Waves.attach(".waves");
   Waves.init();
+  //wow animation
+  wow = new WOW({
+    boxClass:     'wow',
+    animateClass: 'animated',
+    offset:       0, 
+    mobile:       false,
+    live:         true
+  });
+  wow.init();
   //box slider intro
   $('#introSlider').boxSlider({
     effect: 'scrollHorz',
@@ -97,9 +106,9 @@ jQuery(document).ready(function () {
         settings: {
           swipe: true,
           touchMove: true,
-        },
-      },
-    ],
+        }
+      }
+    ]
   });
   //gallery lightbox options
   lightbox.option({
