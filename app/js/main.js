@@ -75,16 +75,33 @@ jQuery(document).ready(function () {
     live:         true
   });
   wow.init();
-  //box slider intro
-  $('#introSlider').boxSlider({
-    effect: 'scrollHorz',
-    /*blindCount: 20,*/
-    pauseOnHover: true,
-    responsive: true,
-    speed: 1800,
-    timeout: 3000,
-    perspective: 1000,
-    autoScroll: true
+  // slider intro
+  var introSlider = $('#introSlider');
+  introSlider.slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    speed: 800,
+    cssEase: 'ease-in',
+    zIndex: 2,
+    dots: true,
+    dotsClass: 'intro-dots',
+    arrows: false,
+    swipe: false,
+    touchMove: false,
+    focusOnSelect: false,
+    fade: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          swipe: true,
+          touchMove: true,
+          dots: false,
+        }
+      }
+    ]
   });
   //services slider
   var sSlider = $("#servicesSlider");

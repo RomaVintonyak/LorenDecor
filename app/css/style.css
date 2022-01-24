@@ -467,55 +467,98 @@ a:focus {
 .intro__row {
     width: 100%;
     height: calc(100vh - 8rem);
-  /*overflow: hidden;*/
-    display: table;
-    padding: 3rem 0;
-  /*display: flex;
-   justify-content: center;
-   align-items: center;*/
+    position: relative;
 }
 
 .intro__slider {
-    display: table-cell;
-    vertical-align: middle;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    width: 85%;
+    height: 100%;
 }
 
-.intro__slider--item {
-    display: flex !important;
-    align-items: center;
+.intro__content {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
-.intro__slider--content {
-    width: 45%;
-}
-
-.intro__slider--content h2 {
-    font-weight: 600;
-    color: #000000;
-    font-size: 3rem;
+.intro__content p {
     font-family: "Quicksand", sans-serif;
-    margin-bottom: 1.5rem;
-}
-
-.intro__slider--content p {
     font-weight: 600;
+    font-size: 2rem;
     color: #000000;
-    font-size: 1.6rem;
-    font-family: "Quicksand", sans-serif;
-}
-
-.intro__slider--img {
-  /*width: 70%;*/
-    margin-left: 3rem;
 }
 
 .main__title {
+    text-transform: uppercase;
+    font-family: "Libre Baskerville", serif;
+    font-size: 10rem;
     font-weight: 700;
+    letter-spacing: 0.8rem;
     color: #000000;
-    font-size: 5.5rem;
-    font-family: "Quicksand", sans-serif;
-    margin-bottom: 1.5rem;
+    background: url("../../img/modal/5.JPG") no-repeat center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 2rem;
+}
+
+.main__suptitle {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 600;
+    font-size: 5rem;
+    color: #C18D7A;
+    margin-bottom: 2rem;
+}
+
+.intro__scroll {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    margin-bottom: 1rem;
+    width: 38px;
+    height: 100px;
+}
+
+.intro__scroll span {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-bottom: 5px solid #C18D7A;
+    border-right: 5px solid #C18D7A;
+    transform: rotate(45deg);
+    margin: -16px 0;
+    -webkit-animation: btnScroll 2s infinite;
+    animation: btnScroll 2s infinite;
+}
+
+.intro__scroll span:nth-child(2) {
+    -webkit-animation-delay: -0.2s;
+    animation-delay: -0.2s;
+}
+
+.intro__scroll span:nth-child(3) {
+    -webkit-animation-delay: -0.4s;
+    animation-delay: -0.4s;
+}
+
+.intro__scroll span:nth-child(4) {
+    -webkit-animation-delay: -0.6s;
+    animation-delay: -0.6s;
+}
+
+.intro__scroll:hover {
+    cursor: pointer;
 }
 
 .intro__asside {
@@ -556,10 +599,41 @@ a:focus {
     color: #C18D7A;
 }
 
+@-webkit-keyframes btnScroll {
+    0% {
+        opacity: 0;
+        transform: translate(0, -20px) rotate(45deg);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(0, 20px) rotate(45deg);
+    }
+}
+
+@keyframes btnScroll {
+    0% {
+        opacity: 0;
+        transform: translate(0, -20px) rotate(45deg);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(0, 20px) rotate(45deg);
+    }
+}
+
 /*aside*/
 .aside__buttons {
-    position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
     width: 4.9rem;
     top: 15vh;
     left: 2%;
@@ -594,7 +668,6 @@ a:focus {
 /*about*/
 .about__row {
     width: 100%;
-    height: 40rem;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -627,7 +700,6 @@ a:focus {
 
 .about__row--img {
     width: 45%;
-    height: 100%;
     position: relative;
 }
 
@@ -660,6 +732,50 @@ a:focus {
     z-index: 2;
     top: 0;
     left: 0;
+    -webkit-animation-name: zoom;
+    animation-name: zoom;
+    -webkit-animation-duration: 5s;
+    animation-duration: 5s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
+
+.about__row--iWraper {
+    overflow: hidden;
+}
+
+@-webkit-keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+    100% {
+        transform: scale(1.3);
+    }
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+    100% {
+        transform: scale(1.3);
+    }
 }
 
 /*services*/
@@ -1467,6 +1583,110 @@ body.lb-disable-scrolling {
 .slick-dots .slick-active button {
     border-color: #c18d7a;
     background-color: #C18D7A;
+}
+
+.intro-dots {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    position: absolute;
+    top: 0;
+    right: -6%;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.intro-dots li {
+    display: table;
+    width: 4rem;
+    height: 2rem;
+    text-align: left;
+}
+
+.intro-dots li button {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 0;
+    color: transparent;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: #C18D7A;
+    transition: all 0.3s linear;
+}
+
+.intro-dots li button:focus {
+    outline: none;
+}
+
+.intro-dots li:hover {
+    cursor: pointer;
+}
+
+.intro-dots li:hover button {
+    cursor: pointer;
+    width: 3.5rem;
+    height: 0.4rem;
+    border-radius: 0;
+    position: relative;
+}
+
+.intro-dots li:hover button::before {
+    content: "";
+    position: absolute;
+    left: -0.3rem;
+    top: -0.4rem;
+    height: 0.4rem;
+    width: 1.5rem;
+    background-color: #C18D7A;
+    transform: rotate(-45deg);
+}
+
+.intro-dots li:hover button::after {
+    content: "";
+    position: absolute;
+    left: -0.3rem;
+    bottom: -0.4rem;
+    height: 0.4rem;
+    width: 1.5rem;
+    background-color: #C18D7A;
+    transform: rotate(45deg);
+}
+
+.intro-dots .slick-active button {
+    width: 3.5rem;
+    height: 0.4rem;
+    border-radius: 0;
+    position: relative;
+}
+
+.intro-dots .slick-active button::before {
+    content: "";
+    position: absolute;
+    left: -0.3rem;
+    top: -0.4rem;
+    height: 0.4rem;
+    width: 1.5rem;
+    background-color: #C18D7A;
+    transform: rotate(-45deg);
+}
+
+.intro-dots .slick-active button::after {
+    content: "";
+    position: absolute;
+    left: -0.3rem;
+    bottom: -0.4rem;
+    height: 0.4rem;
+    width: 1.5rem;
+    background-color: #C18D7A;
+    transform: rotate(45deg);
 }
 
 /*waves effect*/

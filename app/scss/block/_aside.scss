@@ -2,7 +2,7 @@
 @import "./mixin.scss";
 
 .aside__buttons {
-   position: sticky;
+   position: fixed;
    width: 4.9rem;
    top: 15vh;
    left: 2%;
