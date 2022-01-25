@@ -7,10 +7,24 @@ $(window).on("load", function () {
     $("body").css({ "overflow-y": "scroll" });
     $("body").removeAttr("style");
     loader.addClass("loader--done");
+    //type js seting
+    var typed = new Typed(".typed", {
+      strings: ["Wedding Decor... ", "Flowers..."],
+      startDelay: 2000,
+      typeSpeed: 120,
+      backSpeed: 60,
+      backDelay: 1500,
+      fadeOut: true,
+      showCursor: false,
+      loop: true,
+    });
   }, timeDelay);
 });
 jQuery(document).ready(function () {
   "use script";
+  //constant
+  const introH = $("#intro").height();
+  const headerH = $("#header").height();
   //fixed header
   var header = $("#header");
   $(window).on("scroll", function () {
@@ -20,6 +34,14 @@ jQuery(document).ready(function () {
     else {
       header.removeClass("header__fixed");
     }
+  });
+  //scroll dwn Intro Btn
+  var introBtnDwn = $("#btnIntroScroll");
+  introBtnDwn.on("click", function (event) {
+    event.preventDefault();
+    $("html, body").animate({
+      scrollTop: introH - headerH
+    }, 1000);
   });
   //modal window
   var mOpen = $("[data-info]");
@@ -48,7 +70,6 @@ jQuery(document).ready(function () {
   });
   //back top button
   var topBtn = $("#topBtn");
-  var introH = $("#intro").height();
   topBtn.fadeOut(800);
   $(window).on("scroll", function () {
     if ($(this).scrollTop() > (introH)) {
@@ -68,11 +89,11 @@ jQuery(document).ready(function () {
   Waves.init();
   //wow animation
   wow = new WOW({
-    boxClass:     'wow',
+    boxClass: 'wow',
     animateClass: 'animated',
-    offset:       0, 
-    mobile:       false,
-    live:         true
+    offset: 0,
+    mobile: false,
+    live: true
   });
   wow.init();
   // slider intro

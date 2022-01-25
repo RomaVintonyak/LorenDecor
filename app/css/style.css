@@ -462,6 +462,11 @@ a:focus {
     height: calc(100vh - 8rem);
     background-color: #F9EFED;
     position: relative;
+    background-image: none;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .intro__row {
@@ -516,6 +521,7 @@ a:focus {
     font-family: "Libre Baskerville", serif;
     font-weight: 600;
     font-size: 5rem;
+    height: 6rem;
     color: #C18D7A;
     margin-bottom: 2rem;
 }
@@ -526,18 +532,18 @@ a:focus {
     left: 0;
     z-index: 5;
     margin-bottom: 1rem;
-    width: 38px;
-    height: 100px;
+    width: 3.8rem;
+    height: 10rem;
 }
 
 .intro__scroll span {
     display: block;
-    width: 30px;
-    height: 30px;
-    border-bottom: 5px solid #C18D7A;
-    border-right: 5px solid #C18D7A;
+    width: 3rem;
+    height: 3rem;
+    border-bottom: 0.4rem solid #C18D7A;
+    border-right: 0.4rem solid #C18D7A;
     transform: rotate(45deg);
-    margin: -16px 0;
+    margin: -1.6rem 0;
     -webkit-animation: btnScroll 2s infinite;
     animation: btnScroll 2s infinite;
 }
@@ -602,7 +608,7 @@ a:focus {
 @-webkit-keyframes btnScroll {
     0% {
         opacity: 0;
-        transform: translate(0, -20px) rotate(45deg);
+        transform: translate(0, -2rem) rotate(45deg);
     }
 
     50% {
@@ -611,14 +617,14 @@ a:focus {
 
     100% {
         opacity: 0;
-        transform: translate(0, 20px) rotate(45deg);
+        transform: translate(0, 2rem) rotate(45deg);
     }
 }
 
 @keyframes btnScroll {
     0% {
         opacity: 0;
-        transform: translate(0, -20px) rotate(45deg);
+        transform: translate(0, -2rem) rotate(45deg);
     }
 
     50% {
@@ -627,7 +633,7 @@ a:focus {
 
     100% {
         opacity: 0;
-        transform: translate(0, 20px) rotate(45deg);
+        transform: translate(0, 2rem) rotate(45deg);
     }
 }
 

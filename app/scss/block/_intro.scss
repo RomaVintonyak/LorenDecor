@@ -6,6 +6,12 @@
    height: calc(100vh - 8rem);
    background-color: $secondary-color;
    position: relative;
+
+   background-image: none;
+   background-attachment: fixed;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
 }
 .intro__row {
    width: 100%;
@@ -48,7 +54,6 @@
    //background-size: cover;
    //mix-blend-mode: lighten;
    background-clip: text;
-   //word-break: break-word;
    -webkit-text-fill-color: transparent;
    margin-bottom: 2rem;
 }
@@ -56,6 +61,7 @@
    font-family: $font-primary;
    font-weight: 600;
    font-size: 5rem;
+   height: 6rem;
    color: $secondary-color-two;
    margin-bottom: 2rem;
 }
@@ -65,16 +71,16 @@
    left: 0;
    z-index: 5;
    margin-bottom: 1rem;
-   width: 38px;
-   height: 100px;
+   width: 3.8rem;
+   height: 10rem;
    span {
       display: block;
-      width: 30px;
-      height: 30px;
-      border-bottom: 5px solid $secondary-color-two;
-      border-right: 5px solid $secondary-color-two;
+      width: 3rem;
+      height: 3rem;
+      border-bottom: 0.4rem solid $secondary-color-two;
+      border-right: 0.4rem solid $secondary-color-two;
       transform: rotate(45deg);
-      margin: -16px 0;
+      margin: -1.6rem 0;
       animation: btnScroll 2s infinite;
       &:nth-child(2) {
          animation-delay: -0.2s;
@@ -127,13 +133,13 @@
 @keyframes btnScroll {
    0% {
       opacity: 0;
-      transform: translate(0, -20px) rotate(45deg);
+      transform: translate(0, -2rem) rotate(45deg);
    }
    50% {
       opacity: 1;
    }
    100% {
       opacity: 0;
-      transform: translate(0, 20px) rotate(45deg);
+      transform: translate(0, 2rem) rotate(45deg);
    }
 }
