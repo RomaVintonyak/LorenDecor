@@ -15,14 +15,14 @@
       text-decoration: none;
       padding: 1.5rem;
       border-bottom: 1px solid;
-      border-bottom-color: rgba($main-color-one, 0.3);
+      border-bottom-color: rgba($main-color-one, 0.7);
       i {
-         color: rgba($main-color-one, 0.5);
+         color: rgba($secondary-color-two, 0.7);
          transition: color 0.2s linear;
       }
       &:hover {
          i {
-            color: rgba($main-color-one, 1);
+            color: rgba($secondary-color-two, 1);
          }
       }
       &:last-child {

@@ -6,12 +6,6 @@
    height: calc(100vh - 8rem);
    background-color: $secondary-color;
    position: relative;
-
-   background-image: none;
-   background-attachment: fixed;
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: cover;
 }
 .intro__row {
    width: 100%;
@@ -25,6 +19,8 @@
    z-index: 2;
    width: 85%;
    height: 100%;
+   
+
 }
 .intro__content {
    width: 50%;

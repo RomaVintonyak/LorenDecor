@@ -27,7 +27,7 @@
          margin-right: 0; 
       }
       i{
-         color: $white;
+         color: $black;
          font-size: 1.7rem;
          transition: color 0.3s linear;
       }
@@ -35,7 +35,7 @@
          cursor: pointer;
          background-color: $white;
          i{
-            color: $main-color-one;
+            color: $secondary-color-two;
          }
       }
    }
@@ -87,6 +87,8 @@
       a{
          text-decoration: none;
          display: block;
+         width: 100%;
+         max-width: 19rem;
          font-weight: 400;
          color: $black;
          font-size: 1.5rem;
@@ -103,8 +105,8 @@
          }
          &:hover{
             cursor: pointer;
-            background-color: rgba($main-color-one, 0.7);
-            color: $secondary-color;
+            background-color: rgba($white, 1);
+            color: $secondary-color-two;
          }
       }
    }
