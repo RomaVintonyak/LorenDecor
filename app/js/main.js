@@ -9,12 +9,11 @@ $(window).on("load", function () {
     loader.addClass("loader--done");
     //type js seting
     var typed = new Typed(".typed", {
-      strings: ["Wedding Decor... ", "Flowers..."],
+      strings: ["Wedding Decor Flowers"],
       startDelay: 2000,
       typeSpeed: 120,
       backSpeed: 60,
       backDelay: 1500,
-      fadeOut: true,
       showCursor: false,
       loop: true,
     });
@@ -25,6 +24,12 @@ jQuery(document).ready(function () {
   //constant
   const introH = $("#intro").height();
   const headerH = $("#header").height();
+  //center intro slider
+  var introSl = $(".intro__slider");
+  var introSliderCount = introSl.attr("data-count");
+  var introSlH = introSl.height() / introSliderCount;
+  var positionSl = (introH - introSlH) / 2;
+  introSl.css({"top": positionSl+"px"});
   //fixed header
   var header = $("#header");
   $(window).on("scroll", function () {
