@@ -24,6 +24,16 @@ jQuery(document).ready(function () {
   //constant
   const introH = $("#intro").height();
   const headerH = $("#header").height();
+  //progress bar
+  $(window).on("scroll resize", function(){
+    var dHeight = $(document).height();
+    var wHeight = $(window).height();
+    var scrollTop = $(window).scrollTop();
+    var prog = scrollTop / (dHeight - wHeight);
+    $("#progressBlock").css({
+      width: ((100 * prog) | 0) + "%"
+    });
+  });
   //center intro slider
   var introSl = $(".intro__slider");
   var introSliderCount = introSl.attr("data-count");

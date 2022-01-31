@@ -1,0 +1,73 @@
+//*mixins*//
+@import "./mixin.scss";
+
+.aboutUsP__main{
+   &--row{
+      text-align: center;
+      h3{
+         font-family: $font-secondary;
+         font-weight: 600;
+         font-size: 3rem;
+         color: $black;
+         margin-bottom: 1.5rem;  
+      }
+      p{
+         font-family: $font-secondary;
+         color: $black;
+         font-size: 1.6rem;
+         font-weight: 400;
+         text-align: justify;
+         width: 80%;
+         margin: 0 auto;
+      }
+   }
+}
+.about__stage{
+   text-align: center;
+   &--row{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      hr{
+         margin: 0;
+         width: 100%;
+         height: 1px;
+         border: none;
+         border-color: transparent;
+         background-color: $secondary-color-two;
+         margin-top: 3.5rem;
+      }
+   }
+}
+.stage__title{
+   font-family: $font-secondary;
+   font-weight: 600;
+   font-size: 3rem;
+   color: $black;
+   margin-bottom: 1.5rem;  
+}
+.stage__collum{
+   width: 50%;
+   margin-top: 2rem;
+   i{
+      color: $secondary-color-two;
+      margin-bottom: 1.5rem;
+   }
+   h4{
+      font-family: $font-secondary;
+      font-weight: 600;
+      font-size: 2rem;
+      color: $black;
+      margin-bottom: 1.5rem;  
+   }
+   p{
+      font-family: $font-secondary;
+      color: $black;
+      font-size: 1.6rem;
+      font-weight: 400;
+      text-align: justify;
+      width: 80%;
+      margin: 0 auto;
+   }
+}

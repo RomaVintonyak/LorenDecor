@@ -46,6 +46,8 @@ a {
   }
 }
 /*==============block=============*/
+/*load line*/
+@import 'block/load_line.scss';
 /*loader*/
 @import 'block/loader.scss';
 /*main*/
@@ -70,6 +72,8 @@ a {
 @import 'block/modal.scss';
 /*back top*/
 @import 'block/back_top.scss';
+/*aboutPage*/
+@import "block/aboutPage.scss";
 
 /*==============vendor=============*/
 /*lightbox gallery*/

@@ -17,9 +17,29 @@
   <meta name="format-detection" content="telephone=no" />
   <!--BlackBerry-->
   <meta http-equiv="x-rim-auto-match" content="none" />
-  <title>Loren&commat; &mdash; Wedding Decor Company</title>
+  <!--fav icon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="img/favicon/site.webmanifest">
+  <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#2f88a2">
+  <meta name="msapplication-TileColor" content="#2b5797">
+  <meta name="theme-color" content="#ffffff">
+  <!--title-->
+  <title>Loren&commat; &mdash; Студія Весільного декору та флористики</title>
 </head>
-<body>
+<body style="overflow-y: hidden;">
+<!--progress bar block-->
+<section id="progressBlock" class="progress__block">
+  <div class="load__line"></div>
+</section>
+<!--preloader animation-->
+<section id="loader" class="loader">
+  <div class="loader__wraper">
+    <img src="img/loader/loader.gif" alt="heart">
+    <p>Loading...</p>
+  </div><!--/.loader__wraper-->
+</section><!--/.loader-->
 <!--main page-->
 <main id="main" class="main">
   <!--header-->
@@ -27,14 +47,14 @@
     <div class="container">
       <nav id="nav" class="nav__menu">
         <div class="navbar__brand">
-          <a href="./index.html" class="navbar__brand--logo">
+          <a href="./index.html" class="navbar__brand--logo waves waves-light">
             <img class="img" src="img/header/logo.png" alt="logo">
           </a>
         </div><!--/.navbar__brand-->
         <div class="navbar__menu">
           <ul class="main__menu">
             <li class="main__menu--item">
-              <a class="main__menu--link" href="./index.html">Головна</a>
+              <a class="main__menu--link active" href="./index.html">Головна</a>
             </li>
             <li class="main__menu--item">
               <a class="main__menu--link" href="pages/about.html">Про нас</a>
@@ -57,71 +77,28 @@
   <section id="intro" class="intro">
     <div class="container">
       <div class="intro__row">
-        <div class="intro__slider" id="introSlider">
-          
-          
-          <div class="intro__slider--item slide">
-            <div class="intro__slider--content">
-              <h1 class="main__title">Loren</h1>
-              <h2>Wedding. Decor. Flowers</h2>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                Repellat, sapiente! Fugiat rerum ipsam odit asperiores 
-                rem praesentium incidunt, necessitatibus nam.
-              </p>
-            </div><!--/.content-->
-            <div class="intro__slider--img">
-              <img class="img" src="img/intro/4.jpeg" alt="wedding">
-            </div><!--/.img-->
-          </div><!--/.item-->
-
-          <div class="intro__slider--item slide">
-            <div class="intro__slider--content">
-              <h2>Wedding</h2>
-              <h2>Wedding. Decor. Flowers</h2>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                Repellat, sapiente! Fugiat rerum ipsam odit asperiores 
-                rem praesentium incidunt, necessitatibus nam.
-              </p>
-            </div><!--/.content-->
-            <div class="intro__slider--img">
-              <img class="img" src="img/intro/5.jpeg" alt="wedding">
-            </div><!--/.img-->
-          </div><!--/.item-->
-          
-          
-          <div class="intro__slider--item slide">
-            <div class="intro__slider--content">
-              <h2>Decor</h2>
-              <h2>Wedding. Decor. Flowers</h2>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                Repellat, sapiente! Fugiat rerum ipsam odit asperiores 
-                rem praesentium incidunt, necessitatibus nam.
-              </p>
-            </div><!--/.content-->
-            <div class="intro__slider--img">
-              <img class="img" src="img/intro/4.jpeg" alt="wedding">
-            </div><!--/.img-->
-          </div><!--/.item-->
-          
-          
-          <div class="intro__slider--item slide">
-            <div class="intro__slider--content">
-              <h2>Flowers</h2>
-              <h2>Wedding. Decor. Flowers</h2>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                Repellat, sapiente! Fugiat rerum ipsam odit asperiores 
-                rem praesentium incidunt, necessitatibus nam.
-              </p>
-            </div><!--/.content-->
-            <div class="intro__slider--img">
-              <img class="img" src="img/intro/5.jpeg" alt="wedding">
-            </div><!--/.img-->
-          </div><!--/.item-->
-
+        <div class="intro__content">
+          <h1 class="main__title wow fadeInDown" data-wow-duration="1.5s" data-wow-delay="3s">
+            Loren
+          </h1>
+          <h2 class="typed main__suptitle wow fadeInDown" data-wow-duration="1.5s" data-wow-delay="4s"></h2>
+          <p class="main__text wow fadeInDown" data-wow-duration="1.5s" data-wow-delay="5s">
+            Студія весільного декору та флористики
+          </p>
+        </div><!--/.intro__content-->
+        <div class="intro__scroll" id="btnIntroScroll">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div><!--/.intro__scroll-->
+        <div class="intro__slider" data-count="4">
+          <div class="intro__slider--wraper" id="introSlider">
+            <img src="img/intro/9.JPG" alt="wedding" class="img">
+            <img src="img/intro/12.jpg" alt="wedding" class="img">
+            <img src="img/intro/14.jpg" alt="wedding" class="img">
+            <img src="img/intro/3.jpg" alt="wedding" class="img">
+          </div><!--/.wraper-->
         </div><!--/.intro__slider-->
       </div><!--/.intro__row-->
     </div><!--/.container-->
@@ -136,43 +113,41 @@
       </ul><!--/.social__menu-->
     </div><!--/.intro__asside-->
   </section><!--/.intro-->
+  <!--asside-->
+  <aside class="aside__buttons">
+    <a class="waves waves-light" href="tel:+380972349231"><i class="fas fa-phone-alt"></i></a>
+    <a class="waves waves-light" href="mailto:loren.decor@ukr.net&cc=loren.decor@ukr.net?body=Привіт... Ваше повідомлення?subject=Запитання клієнта">
+      <i class="fas fa-envelope"></i>
+    </a>
+    <a class="waves waves-light" href="#" data-info="modal-info"><i class="fas fa-info-circle"></i></a>
+  </aside><!--/.aside__buttons-->
   <!--about us-->
   <section class="about mt-6" id="about">
-    <div class="aside__buttons">
-      <a href="tel:+380972349231"><i class="fas fa-phone-alt"></i></a>
-      <a href="mailto:loren.decor@ukr.net&cc=loren.decor@ukr.net?body=Привіт... Ваше повідомлення?subject=Запитання клієнта">
-        <i class="fas fa-envelope"></i>
-      </a>
-      <a href="#" data-info="modal-info"><i class="fas fa-info-circle"></i></a>
-    </div><!--/.aside__buttons-->
     <div class="container">
       <div class="about__row">
         <div class="about__row--text">
-          <h2>Lorem ipsum dolor sit amet.</h2>
+          <h2>Правильний вибір за Вами!</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Harum alias sequi consectetur numquam, quasi corrupti vero 
-            facere amet, atque ut asperiores sapiente, voluptate quidem 
-            et vitae vel molestias tempora. At pariatur distinctio 
-            culpa tempora quos.
+            Весілля це важливий день і нам дуже хочеться щоб твоє весілля було ідеальним. 
+            Щоб наречена зайшла в зал і подумала -  " Вав , я рада що обрала саме їх...". 
+            А потім рекомендувала нас всім свої подругам.
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Harum alias sequi consectetur numquam, quasi corrupti vero 
-            facere amet, atque ut asperiores sapiente, voluptate quidem 
-            et vitae vel molestias tempora. At pariatur distinctio 
-            culpa tempora quos.
+            Коли Ви обираєте декораторів на своє весілля, 
+            обов'язково  зверніть увагу на їх попередні роботи, 
+            чи Вам подобається стиль роботи , 
+            чи Ваші розуміння про декор співпадають. 
+            Адже дуже важливо знайти однодумців і повністю довіритись їм.
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Harum alias sequi consectetur numquam, quasi corrupti vero 
-            facere amet, atque ut asperiores sapiente, voluptate quidem 
-            et vitae vel molestias tempora. At pariatur distinctio 
-            culpa tempora quos.
+            Основне наше правило - перевершити очікування . 
+            Ми робимо все і трішки більше...
           </p>
         </div><!--/.text-->
         <div class="about__row--img">
-          <img src="img/intro/4.jpeg" alt="weding" class="img">
+          <div class="about__row--iWraper">
+            <img src="img/about/3.jpg" alt="weding" class="img">
+          </div><!--/.iWraper-->
         </div><!--/.img-->
       </div><!--/.about__row-->
     </div><!--/.container-->
@@ -182,16 +157,21 @@
     <div class="container">
       <div class="services__row">
         <div class="services__col services__col--img">
-          <img src="img/intro/5.jpeg" alt="wedding" class="img">
+          <div class="services__slider" id="servicesSlider">
+            <img src="img/services/1.jpg" alt="wedding" class="img">
+            <img src="img/services/2.jpg" alt="wedding" class="img">
+            <img src="img/services/3.jpg" alt="wedding" class="img">
+            <img src="img/services/4.jpg" alt="wedding" class="img">
+          </div>
         </div><!--/.img-->
         <div class="services__col services__col--text">
           <h2>Ми пропонуємо</h2>
           <div class="services__text">
             <div class="services__text--col">
               <div class="text__icon">
-                <i class="fas fa-heart"></i>
+                <img class="img" src="img/services/icons/8.svg" alt="icon">
               </div><!--/.text__icon-->
-              <div class="text__data">
+              <div class="text__data wow fadeInUp" data-wow-duration="2s" data-wow-offset="100">
                 <h3>Флористика</h3>
                 <p>
                   Флористика — Це важлива складова весільного декору. 
@@ -203,9 +183,9 @@
             </div><!--/.services__text-->
             <div class="services__text--col">
               <div class="text__icon">
-                <i class="fas fa-heart"></i>
+                <img class="img" src="img/services/icons/3.svg" alt="icon">
               </div><!--/.text__icon-->
-              <div class="text__data">
+              <div class="text__data wow fadeInUp" data-wow-duration="2s" data-wow-offset="100">
                 <h3>Зона молодих</h3>
                 <p>
                   Варіантів оформлення існує безліч, 
@@ -217,9 +197,9 @@
             </div><!--/.services__text-->
             <div class="services__text--col">
               <div class="text__icon">
-                <i class="fas fa-heart"></i>
+                <img class="img" src="img/services/icons/9.svg" alt="icon">
               </div><!--/.text__icon-->
-              <div class="text__data">
+              <div class="text__data wow fadeInUp" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="80">
                 <h3>Фотозона</h3>
                 <p>
                   Фотозона - місце, що залишиться на світлинах 
@@ -230,9 +210,9 @@
             </div><!--/.services__text-->
             <div class="services__text--col">
               <div class="text__icon">
-                <i class="fas fa-heart"></i>
+                <img class="img" src="img/services/icons/1.svg" alt="icon">
               </div><!--/.text__icon-->
-              <div class="text__data">
+              <div class="text__data wow fadeInUp" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="80">
                 <h3>Виїзна реєстрація</h3>
                 <p>
                   Виїзна реєстрація - це без сумніву 
@@ -245,9 +225,9 @@
             </div><!--/.services__text-->
             <div class="services__text--col">
               <div class="text__icon">
-                <i class="fas fa-heart"></i>
+                <img class="img" src="img/services/icons/7.svg" alt="icon">
               </div><!--/.text__icon-->
-              <div class="text__data">
+              <div class="text__data wow fadeInUp" data-wow-duration="2s" data-wow-delay="2s" data-wow-offset="60">
                 <h3>Весільна поліграфія</h3>
                 <p>
                   Погодьтесь, перше враження про 
@@ -260,9 +240,9 @@
             </div><!--/.services__text-->
             <div class="services__text--col">
               <div class="text__icon">
-                <i class="fas fa-heart"></i>
+                <img class="img" src="img/services/icons/4.svg" alt="icon">
               </div><!--/.text__icon-->
-              <div class="text__data">
+              <div class="text__data wow fadeInUp" data-wow-duration="2s" data-wow-delay="2s" data-wow-offset="60">
                 <h3>Оформлення під ключ</h3>
                 <p>
                   Якщо Ви готові довірити своє свято 
@@ -284,38 +264,130 @@
       <div class="gallery__row text__center">
         <h2>Приклади наших робіт</h2>
         <div class="gallery__slider" id="gallerySlider">
-          <a href="img/gallery/1.jpeg"  data-lightbox="roadtrip">
-            <img src="img/gallery/1.jpeg" alt="wedding" class="img"> 
+          <a href="img/work__slider/1.JPG"  data-lightbox="roadtrip">
+            <img src="img/work__slider/1.JPG" alt="wedding" class="img"> 
           </a>
-          <a href="img/gallery/2.jpeg"  data-lightbox="roadtrip">
-            <img src="img/gallery/2.jpeg" alt="wedding" class="img"> 
+          <a href="img/work__slider/2.jpg"  data-lightbox="roadtrip">
+            <img src="img/work__slider/2.jpg" alt="wedding" class="img"> 
           </a>
-          <a href="img/gallery/3.jpeg"  data-lightbox="roadtrip">
-            <img src="img/gallery/3.jpeg" alt="wedding" class="img"> 
+          <a href="img/work__slider/3.JPG"  data-lightbox="roadtrip">
+            <img src="img/work__slider/3.JPG" alt="wedding" class="img"> 
           </a>
-          <a href="img/gallery/4.jpeg"  data-lightbox="roadtrip">
-            <img src="img/gallery/4.jpeg" alt="wedding" class="img"> 
+          <a href="img/work__slider/4.jpg"  data-lightbox="roadtrip">
+            <img src="img/work__slider/4.jpg" alt="wedding" class="img"> 
           </a>
-          <a href="img/gallery/6.jpg"  data-lightbox="roadtrip">
-            <img src="img/gallery/6.jpg" alt="wedding" class="img"> 
+          <a href="img/work__slider/5.JPG"  data-lightbox="roadtrip">
+            <img src="img/work__slider/5.JPG" alt="wedding" class="img"> 
+          </a>
+          <a href="img/work__slider/6.JPG"  data-lightbox="roadtrip">
+            <img src="img/work__slider/6.JPG" alt="wedding" class="img"> 
           </a>
         </div><!--/.gallery__slider-->
       </div><!--/.gallery__row-->
     </div><!--/.container-->
   </section><!--/.gallery-->
+  <!--footer-->
+  <footer class="footer mt-6" id="footer">
+    <div class="footer__social">
+      <div class="container">
+        <div class="footer__social--content">
+          <h4>Ми у соціальних мережах</h4>
+          <div class="social__link">
+            <a target="_blank" href="https://www.facebook.com/oksanavolodynyrivna?ref=bookmarks">
+              <i class="fab fa-facebook-square"></i>
+            </a>
+            <a target="_blank" href="https://www.instagram.com/loren.if/?hl=ru">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div><!--/.social__link-->
+        </div><!--/.content-->
+      </div><!--/.container-->
+    </div><!--/.footer__social-->
+    <div class="footer__collum">
+        <div class="container">
+          <div class="footer__row">
+            <div class="footer__col footer__col--brand">
+              <h3>Loren</h3>
+              <hr>
+              <p>
+                Студія весільного декору та флористики,
+                м. Івано &ndash; Франківськ
+              </p>
+              <p>
+                Всі права захищено &copy;2019 &mdash; <script>document.write(new Date().getFullYear());</script>
+              </p>
+            </div><!--/.brand-->
+            <div class="footer__col footer__col--insta">
+              <h3>Instagram</h3>
+              <hr>
+              <div class="insta__container" id="instaContainer"></div>
+            </div><!--/.insta-->
+            <div class="footer__col footer__col--contact">
+              <h3>Contacts</h3>
+              <hr>
+              <a href="tel:+380972349231"><i class="fas fa-phone-alt"></i>+38097 23 49 231</a>
+              <a href="viber://add?number=380972349231"><i class="fab fa-viber"></i>+38097 23 49 231</a>
+              <a href="mailto:loren.decor@ukr.net&cc=loren.decor@ukr.net?body=Привіт... Ваше повідомлення?subject=Запитання клієнта">
+                <i class="fas fa-envelope"></i>loren.decor@ukr.net
+              </a>
+            </div><!--/.contact-->
+          </div><!--/.footer__row-->
+        </div><!--/.container-->
+    </div><!--/.footer__collum-->
+  </footer><!--/.footer-->
+  <!--modal info-->
+  <div id="modal" class="modal">
+    <div class="modal__mask">
+      <div class="modal__content">
+        <button type="button" class="modal__close">&#9747;</button>
+        <div class="modal__content--img">
+          <img src="img/modal/1.JPG" alt="wedding">
+          <img src="img/modal/4.JPG" alt="wedding">
+          <img src="img/modal/5.JPG" alt="wedding">
+        </div><!--/.img-->
+        <div class="modal__content--text">
+          <div class="text__title">
+            <div class="title__icon">
+              <img src="img/modal/clock_1.svg" alt="icon">
+            </div>
+            <h3>Ми працюємо:</h3>
+          </div><!--/.title__icon-->
+          <div class="text__info">
+            <p>Телефонуйте: Пн. &mdash; Пт. 10:00 &mdash; 19:00</p>
+            <p>Телефонуйте: Сб. &mdash; Нд. 11:00 &mdash; 16:00</p>
+          </div><!--/.text__info-->
+          <div class="text__social">
+            <a class="waves waves-light" href="https://www.facebook.com/oksanavolodynyrivna" target="_blank">
+              <i class="fab fa-facebook-square"></i>
+            </a>
+            <a class="waves waves-light" href="https://www.instagram.com/loren.if/?hl=ru" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div><!--/.text__social-->
+        </div><!--/.text-->
+      </div><!--/.modal__content-->
+    </div><!--/.modal__mask-->
+  </div><!--/.modal-->
+  <!--back top btn-->
+  <div class="back__top hvr-icon-up" id="topBtn">
+    <button class="hvr-icon" id="backTop" type="button">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+  </div><!--/.back__top-->
 </main>
-
-
-
   <!--libs js conected-->
   <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>');</script>
-  <!--box slider https://www.jqueryscript.net/slider/Adaptor-Cool-3D-jQuery-Content-Slider.html#google_vignette -->
-  <script src="js/vendor/box-slider-all.jquery.min.js"></script>
   <!--lightbox gallery plugin https://lokeshdhakar.com/projects/lightbox2/#examples -->
   <script src="js/vendor/lightbox.min.js"></script>
   <!--slick slider https://kenwheeler.github.io/slick/ -->
   <script src="js/vendor/slick.min.js"></script>
+  <!--waves effect https://materializecss.com/waves.html -->
+  <script src="js/vendor/waves.min.js"></script>
+  <!--wow js animation https://wowjs.uk/docs.html -->
+  <script src="js/vendor/wow.min.js"></script>
+  <!--type js https://github.com/mattboldt/typed.js -->
+  <script src="js/vendor/typed.min.js"></script>
   <!-- main script -->
   <script src="js/main.js"></script>
 </body>

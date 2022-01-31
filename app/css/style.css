@@ -281,6 +281,25 @@ a:focus {
 }
 
 /*==============block=============*/
+/*load line*/
+.progress__block {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 150;
+    width: 0;
+    height: 2px;
+    transition: width 0.1s linear;
+}
+
+.load__line {
+    width: 100%;
+    height: 100%;
+    background: #f9efed;
+    background: linear-gradient(90deg, #f9efed 0%, #ebc3bc 35%, #c18d7a 100%);
+}
+
 /*loader*/
 .loader {
     position: fixed;
@@ -507,7 +526,7 @@ a:focus {
     font-weight: 700;
     letter-spacing: 0.8rem;
     color: #000000;
-    background: url("../../img/modal/5.JPG") no-repeat center;
+    background: url("../../img/intro/7.JPG") no-repeat center;
     background-size: cover;
     mix-blend-mode: lighten;
     -webkit-background-clip: text;
@@ -1244,6 +1263,86 @@ a:focus {
     animation-timing-function: ease-out;
 }
 
+/*aboutPage*/
+.aboutUsP__main--row {
+    text-align: center;
+}
+
+.aboutUsP__main--row h3 {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 600;
+    font-size: 3rem;
+    color: #000000;
+    margin-bottom: 1.5rem;
+}
+
+.aboutUsP__main--row p {
+    font-family: "Quicksand", sans-serif;
+    color: #000000;
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-align: justify;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.about__stage {
+    text-align: center;
+}
+
+.about__stage--row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.about__stage--row hr {
+    margin: 0;
+    width: 100%;
+    height: 1px;
+    border: none;
+    border-color: transparent;
+    background-color: #C18D7A;
+    margin-top: 3.5rem;
+}
+
+.stage__title {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 600;
+    font-size: 3rem;
+    color: #000000;
+    margin-bottom: 1.5rem;
+}
+
+.stage__collum {
+    width: 50%;
+    margin-top: 2rem;
+}
+
+.stage__collum i {
+    color: #C18D7A;
+    margin-bottom: 1.5rem;
+}
+
+.stage__collum h4 {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    color: #000000;
+    margin-bottom: 1.5rem;
+}
+
+.stage__collum p {
+    font-family: "Quicksand", sans-serif;
+    color: #000000;
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-align: justify;
+    width: 80%;
+    margin: 0 auto;
+}
+
 /*==============vendor=============*/
 /*lightbox gallery*/
 body.lb-disable-scrolling {
@@ -1878,6 +1977,69 @@ body.lb-disable-scrolling {
 .fadeInUp {
     -webkit-animation-name: fadeInUp;
     animation-name: fadeInUp;
+}
+
+@-webkit-keyframes flipInX {
+    from {
+        transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+
+    40% {
+        transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    60% {
+        transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+        opacity: 1;
+    }
+
+    80% {
+        transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    }
+
+    to {
+        transform: perspective(400px);
+    }
+}
+
+@keyframes flipInX {
+    from {
+        transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+
+    40% {
+        transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    60% {
+        transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+        opacity: 1;
+    }
+
+    80% {
+        transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    }
+
+    to {
+        transform: perspective(400px);
+    }
+}
+
+.flipInX {
+    -webkit-backface-visibility: visible !important;
+    backface-visibility: visible !important;
+    -webkit-animation-name: flipInX;
+    animation-name: flipInX;
 }
 
 @-webkit-keyframes bounce {
@@ -3545,69 +3707,6 @@ body.lb-disable-scrolling {
     backface-visibility: visible;
     -webkit-animation-name: flip;
     animation-name: flip;
-}
-
-@-webkit-keyframes flipInX {
-    from {
-        transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-        -webkit-animation-timing-function: ease-in;
-        animation-timing-function: ease-in;
-        opacity: 0;
-    }
-
-    40% {
-        transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-        -webkit-animation-timing-function: ease-in;
-        animation-timing-function: ease-in;
-    }
-
-    60% {
-        transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
-        opacity: 1;
-    }
-
-    80% {
-        transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
-    }
-
-    to {
-        transform: perspective(400px);
-    }
-}
-
-@keyframes flipInX {
-    from {
-        transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-        -webkit-animation-timing-function: ease-in;
-        animation-timing-function: ease-in;
-        opacity: 0;
-    }
-
-    40% {
-        transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-        -webkit-animation-timing-function: ease-in;
-        animation-timing-function: ease-in;
-    }
-
-    60% {
-        transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
-        opacity: 1;
-    }
-
-    80% {
-        transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
-    }
-
-    to {
-        transform: perspective(400px);
-    }
-}
-
-.flipInX {
-    -webkit-backface-visibility: visible !important;
-    backface-visibility: visible !important;
-    -webkit-animation-name: flipInX;
-    animation-name: flipInX;
 }
 
 @-webkit-keyframes flipInY {
