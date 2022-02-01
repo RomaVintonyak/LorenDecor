@@ -1343,6 +1343,89 @@ a:focus {
     margin: 0 auto;
 }
 
+/*stageSlider*/
+.stage__slider {
+    margin-top: 3.5rem;
+}
+
+.stage__slider--row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.stage__slider--content {
+    margin-top: 3.5rem;
+    text-align: center;
+}
+
+.stage__slider--content hr {
+    margin: 0;
+    margin-bottom: 3.5rem;
+    width: 100%;
+    height: 1px;
+    border: none;
+    border-color: transparent;
+    background-color: #C18D7A;
+}
+
+.stage__slider--content p {
+    font-family: "Quicksand", sans-serif;
+    color: #000000;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.stageSliderBlock {
+    width: 49%;
+}
+
+.stage__check {
+    width: 49%;
+}
+
+.stage__check h4 {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    color: #000000;
+    margin-bottom: 1.5rem;
+}
+
+.stage__check--list {
+    margin: 0;
+    -webkit-padding-start: 2.5rem;
+    padding-inline-start: 2.5rem;
+}
+
+.stage__check--list li {
+    margin-bottom: 1.5rem;
+}
+
+.stage__check--list li:last-child {
+    margin-bottom: 0;
+}
+
+.stage__check--list li p {
+    font-family: "Quicksand", sans-serif;
+    color: #000000;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+/*servicesCard*/
+.services__card--title {
+    text-align: center;
+}
+
+.services__card--title h3 {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 600;
+    font-size: 3rem;
+    color: #000000;
+}
+
 /*==============vendor=============*/
 /*lightbox gallery*/
 body.lb-disable-scrolling {

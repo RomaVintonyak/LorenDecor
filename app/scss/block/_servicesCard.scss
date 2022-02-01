@@ -1,0 +1,14 @@
+//*mixins*//
+@import "./mixin.scss";
+
+.services__card {
+   &--title{
+      text-align: center;
+      h3{
+         font-family: $font-secondary;
+         font-weight: 600;
+         font-size: 3rem;
+         color: $black;  
+      }
+   }
+}

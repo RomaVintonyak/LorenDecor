@@ -1,0 +1,60 @@
+//*mixins*//
+@import "./mixin.scss";
+
+.stage__slider {
+   margin-top: 3.5rem;
+   &--row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      width: 100%;
+   }
+   &--content{
+      margin-top: 3.5rem;
+      text-align: center;
+      hr{
+         margin: 0;
+         margin-bottom: 3.5rem;
+         width: 100%;
+         height: 1px;
+         border: none;
+         border-color: transparent;
+         background-color: $secondary-color-two;
+      }
+      p{
+         font-family: $font-secondary;
+         color: $black;
+         font-size: 1.6rem;
+         font-weight: 400;
+      }
+   }
+}
+.stageSliderBlock {
+   width: 49%;
+}
+.stage__check {
+   width: 49%;
+   h4 {
+      font-family: $font-secondary;
+      font-weight: 600;
+      font-size: 2rem;
+      color: $black;
+      margin-bottom: 1.5rem;
+   }
+   &--list {
+      margin: 0;
+      padding-inline-start: 2.5rem;
+      li {
+         margin-bottom: 1.5rem;
+         &:last-child {
+            margin-bottom: 0;
+         }
+         p {
+            font-family: $font-secondary;
+            color: $black;
+            font-size: 1.6rem;
+            font-weight: 400;
+         }
+      }
+   }
+}
