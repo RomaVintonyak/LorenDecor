@@ -25,7 +25,7 @@ jQuery(document).ready(function () {
   const introH = $("#intro").height();
   const headerH = $("#header").height();
   //progress bar
-  $(window).on("scroll resize", function(){
+  $(window).on("scroll resize", function () {
     var dHeight = $(document).height();
     var wHeight = $(window).height();
     var scrollTop = $(window).scrollTop();
@@ -39,7 +39,7 @@ jQuery(document).ready(function () {
   var introSliderCount = introSl.attr("data-count");
   var introSlH = introSl.height() / introSliderCount;
   var positionSl = (introH - introSlH) / 2;
-  introSl.css({"top": positionSl+"px"});
+  introSl.css({ "top": positionSl + "px" });
   //fixed header
   var header = $("#header");
   $(window).on("scroll", function () {
@@ -99,6 +99,22 @@ jQuery(document).ready(function () {
       scrollTop: 0
     }, 2000, "swing");
   });
+  //jump card
+  var jumpCard = $("._jump");
+  jumpCard.hover(function () {
+    $(this).animate({
+      marginTop: "-=2%",
+    }, 350);
+  },
+    function () {
+      $(this).animate({
+        marginTop: "0%",
+      }, 350);
+    }
+  );
+  jumpCard.mouseleave(function () {
+    jumpCard.removeAttr("style");
+  }); 
   //waves effect
   Waves.attach(".waves");
   Waves.init();
