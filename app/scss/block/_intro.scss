@@ -11,6 +11,8 @@
    width: 100%;
    height: calc(100vh - 8rem);
    position: relative;
+   display: flex;
+   align-items: center;
 }
 .intro__slider {
    position: absolute;

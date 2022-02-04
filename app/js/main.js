@@ -35,11 +35,11 @@ jQuery(document).ready(function () {
     });
   });
   //center intro slider
-  var introSl = $(".intro__slider");
-  var introSliderCount = introSl.attr("data-count");
-  var introSlH = introSl.height() / introSliderCount;
-  var positionSl = (introH - introSlH) / 2;
-  introSl.css({ "top": positionSl + "px" });
+  //var introSl = $(".intro__slider");
+  //var introSliderCount = introSl.attr("data-count");
+  //var introSlH = introSl.height() / introSliderCount;
+  //var positionSl = (introH - introSlH) / 2;
+  //introSl.css({ "top": positionSl + "px" });
   //fixed header
   var header = $("#header");
   $(window).on("scroll", function () {

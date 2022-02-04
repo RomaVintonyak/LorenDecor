@@ -491,6 +491,8 @@ a:focus {
     width: 100%;
     height: calc(100vh - 8rem);
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .intro__slider {
@@ -1498,6 +1500,19 @@ a:focus {
 
 .card__coll:hover {
     box-shadow: -1px 9px 40px -12px #191919;
+}
+
+/*pageGallery*/
+.page__gallery--title {
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+.page__gallery--title h3 {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 600;
+    font-size: 3rem;
+    color: #000000;
 }
 
 /*==============vendor=============*/
