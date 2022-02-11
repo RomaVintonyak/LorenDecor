@@ -1392,7 +1392,7 @@ a:focus {
     font-weight: 600;
     font-size: 2rem;
     color: #000000;
-    margin-bottom: 1.5rem;
+    margin-bottom: 3rem;
 }
 
 .stage__check--list {
@@ -1402,7 +1402,7 @@ a:focus {
 }
 
 .stage__check--list li {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .stage__check--list li:last-child {

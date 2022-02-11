@@ -34,12 +34,6 @@ jQuery(document).ready(function () {
       width: ((100 * prog) | 0) + "%"
     });
   });
-  //center intro slider
-  //var introSl = $(".intro__slider");
-  //var introSliderCount = introSl.attr("data-count");
-  //var introSlH = introSl.height() / introSliderCount;
-  //var positionSl = (introH - introSlH) / 2;
-  //introSl.css({ "top": positionSl + "px" });
   //fixed header
   var header = $("#header");
   $(window).on("scroll", function () {
@@ -157,6 +151,30 @@ jQuery(document).ready(function () {
   });
   //services slider
   var sSlider = $("#servicesSlider");
+  sSlider.slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    zIndex: 2,
+    dots: false,
+    arrows: false,
+    swipe: false,
+    touchMove: false,
+    focusOnSelect: false,
+    fade: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          swipe: true,
+          touchMove: true,
+        }
+      }
+    ]
+  });
+  //about us page slider
+  var sSlider = $(".stageSliderBlock");
   sSlider.slick({
     slidesToShow: 1,
     slidesToScroll: 1,
