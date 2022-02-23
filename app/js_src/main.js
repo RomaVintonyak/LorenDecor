@@ -206,6 +206,15 @@ jQuery(document).ready(function () {
     'wrapAround': true,
     'disableScrolling': true,
   });
+  //simple lightbox gallery page option
+  var galleryPage = $(".box__gallery a");
+  galleryPage.simpleLightbox({
+    disableRightClick:  true,
+    fadeSpeed:          400,
+    animationSpeed:     350,
+    docClose:           false,
+  });
+  console.log(galleryPage);  
   //gallery slider otions
   var gSlider = $("#gallerySlider");
   gSlider.slick({
