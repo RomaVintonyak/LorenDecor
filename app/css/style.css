@@ -1550,6 +1550,59 @@ a:focus {
     color: #000000;
 }
 
+.page__gallery--row {
+    width: 100%;
+}
+
+.box__gallery {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.box__gallery a {
+    display: block;
+    width: 25%;
+    position: relative;
+    text-decoration: none;
+    overflow: hidden;
+    border: 4px solid #F9EFED;
+    transition: opacity 0.3s linear;
+}
+
+.box__gallery a img {
+    transition: transform 0.3s linear;
+}
+
+.box__gallery a::after {
+    content: "";
+    background: transparent url(../img/gallery__page/eye-icon.png) no-repeat center;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s linear, visibility 0.3s linear;
+}
+
+.box__gallery a:hover {
+    opacity: 0.7;
+}
+
+.box__gallery a:hover img {
+    transform: scale(1.1);
+}
+
+.box__gallery a:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
 /*==============vendor=============*/
 /*lightbox gallery*/
 body.lb-disable-scrolling {
@@ -5316,8 +5369,8 @@ body.hidden-scroll {
     width: 44px;
     line-height: 44px;
     font-family: Arial, Baskerville, monospace;
-    color: #000;
-    font-size: 5rem;
+    color: #000000;
+    font-size: 6rem;
 }
 
 .sl-wrapper .sl-counter {
@@ -5326,7 +5379,7 @@ body.hidden-scroll {
     top: 30px;
     left: 30px;
     z-index: 1060;
-    color: #000;
+    color: #000000;
     font-size: 1.6rem;
 }
 
@@ -5346,17 +5399,17 @@ body.hidden-scroll {
     display: block;
     z-index: 10060;
     font-family: Arial, Baskerville, monospace;
-    color: #000;
+    color: #000000;
 }
 
 .sl-wrapper .sl-navigation button.sl-next {
     right: 5px;
-    font-size: 4rem;
+    font-size: 5rem;
 }
 
 .sl-wrapper .sl-navigation button.sl-prev {
     left: 5px;
-    font-size: 4rem;
+    font-size: 5rem;
 }
 
 .sl-wrapper.sl-dir-rtl .sl-navigation {
@@ -5497,22 +5550,6 @@ body.hidden-scroll {
     transition: transform ease 200ms;
 }
 
-/*@-webkit-keyframes pulsate {
-   0% {
-      transform: scale(0.1);
-      opacity: 0;
-   }
-
-   50% {
-      opacity: 1;
-   }
-
-   100% {
-      transform: scale(1.2);
-      opacity: 0;
-   }
-}
-*/
 @-webkit-keyframes pulsate {
     0% {
         transform: scale(0.1);
@@ -5544,52 +5581,3 @@ body.hidden-scroll {
         opacity: 0;
     }
 }
-
-/*@-moz-keyframes pulsate {
-   0% {
-      transform: scale(0.1);
-      opacity: 0;
-   }
-
-   50% {
-      opacity: 1;
-   }
-
-   100% {
-      transform: scale(1.2);
-      opacity: 0;
-   }
-}
-
-@-o-keyframes pulsate {
-   0% {
-      transform: scale(0.1);
-      opacity: 0;
-   }
-
-   50% {
-      opacity: 1;
-   }
-
-   100% {
-      transform: scale(1.2);
-      opacity: 0;
-   }
-}
-
-@-ms-keyframes pulsate {
-   0% {
-      transform: scale(0.1);
-      opacity: 0;
-   }
-
-   50% {
-      opacity: 1;
-   }
-
-   100% {
-      transform: scale(1.2);
-      opacity: 0;
-   }
-}
-*/

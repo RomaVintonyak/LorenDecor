@@ -4,8 +4,6 @@
 body.hidden-scroll {
    overflow: hidden;
 }
-
-
 .sl-overlay {
    position: fixed;
    left: 0;
@@ -16,8 +14,6 @@ body.hidden-scroll {
    display: none;
    z-index: 1035;
 }
-
-
 .sl-wrapper {
    z-index: 1040;
    width: 100%;
@@ -50,8 +46,8 @@ body.hidden-scroll {
       width: 44px;
       line-height: 44px;
       font-family: Arial, Baskerville, monospace;
-      color: #000;
-      font-size: 5rem;
+      color: $black;
+      font-size: 6rem;
    }
    .sl-counter {
       display: none;
@@ -59,7 +55,7 @@ body.hidden-scroll {
       top: 30px;
       left: 30px;
       z-index: 1060;
-      color: #000;
+      color: $black;
       font-size: 1.6rem;
    }
    .sl-navigation {
@@ -76,14 +72,14 @@ body.hidden-scroll {
          display: block;
          z-index: 10060;
          font-family: Arial, Baskerville, monospace;
-         color: #000;
+         color: $black;
          &.sl-next {
             right: 5px;
-            font-size: 4rem;
+            font-size: 5rem;
          }
          &.sl-prev {
             left: 5px;
-            font-size: 4rem;
+            font-size: 5rem;
          }
       }
    }
@@ -193,10 +189,6 @@ body.hidden-scroll {
    top: 50%;
    width: 40px;
    z-index: 1007;
-   //-webkit-animation: pulsate 1s ease-out infinite;
-   //-moz-animation: pulsate 1s ease-out infinite;
-   //-ms-animation: pulsate 1s ease-out infinite;
-   //-o-animation: pulsate 1s ease-out infinite;
    animation: pulsate 1s ease-out infinite;
 }
 .sl-scrollbar-measure {
@@ -207,28 +199,8 @@ body.hidden-scroll {
    overflow: scroll;
 }
 .sl-transition {
-   //transition: -moz-transform ease 200ms;
-   //transition: -ms-transform ease 200ms;
-   //transition: -o-transform ease 200ms;
-   //transition: -webkit-transform ease 200ms;
    transition: transform ease 200ms;
 }
-/*@-webkit-keyframes pulsate {
-   0% {
-      transform: scale(0.1);
-      opacity: 0;
-   }
-
-   50% {
-      opacity: 1;
-   }
-
-   100% {
-      transform: scale(1.2);
-      opacity: 0;
-   }
-}
-*/
 @keyframes pulsate {
    0% {
       transform: scale(0.1);
@@ -244,51 +216,3 @@ body.hidden-scroll {
       opacity: 0;
    }
 }
-/*@-moz-keyframes pulsate {
-   0% {
-      transform: scale(0.1);
-      opacity: 0;
-   }
-
-   50% {
-      opacity: 1;
-   }
-
-   100% {
-      transform: scale(1.2);
-      opacity: 0;
-   }
-}
-
-@-o-keyframes pulsate {
-   0% {
-      transform: scale(0.1);
-      opacity: 0;
-   }
-
-   50% {
-      opacity: 1;
-   }
-
-   100% {
-      transform: scale(1.2);
-      opacity: 0;
-   }
-}
-
-@-ms-keyframes pulsate {
-   0% {
-      transform: scale(0.1);
-      opacity: 0;
-   }
-
-   50% {
-      opacity: 1;
-   }
-
-   100% {
-      transform: scale(1.2);
-      opacity: 0;
-   }
-}
-*/
