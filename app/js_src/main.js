@@ -213,6 +213,17 @@ jQuery(document).ready(function () {
     fadeSpeed:          400,
     animationSpeed:     350,
     docClose:           false,
+    nav:                true,
+    navText:            ['&larr;','&rarr;'],
+    captions:           true,
+    captionDelay:       200,
+    captionSelector:    'img',
+    captionType:        'attr',
+    captionPosition:    'bottom',
+    captionClass:       'gallery__img--title',
+    enableKeyboard:     true,
+    alertError:         true,
+    alertErrorMessage:  'Image not found, next image will be loaded',
   });
   console.log(galleryPage);  
   //gallery slider otions
