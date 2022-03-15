@@ -1,0 +1,56 @@
+//*mixins*//
+@import "./mixin.scss";
+
+.page__contact {
+   &--title {
+      text-align: center;
+      margin-bottom: 6rem;
+      h3 {
+         font-family: $font-secondary;
+         font-weight: 600;
+         font-size: 3rem;
+         color: $black;
+      }
+   }
+   &--form {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+   }
+   &--line {
+      margin-top: 6rem;
+      hr {
+         margin: 0;
+         width: 100%;
+         height: 1px;
+         border: none;
+         border-color: transparent;
+         background-color: $secondary-color-two;
+      }
+   }
+}
+.contact__form{
+   width: 49%;
+}
+.contact__block{
+   width: 49%;
+   &--line{
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 3rem;
+      &:last-child{
+         margin-bottom: 0;
+      }
+      i{
+         font-size: 2rem;
+         margin-right: 1rem;
+         color: $secondary-color-two;
+      }
+      span{
+         font-family: $font-secondary;
+         color: $black;
+         font-size: 1.8rem;
+         font-weight: 400;
+      }
+   }
+}

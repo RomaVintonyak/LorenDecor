@@ -12,17 +12,28 @@
          color: $black;
       }
    }
-   &--row{
+   &--row {
       width: 100%;
    }
+   &--line {
+      margin-top: 6rem;
+      hr {
+         margin: 0;
+         width: 100%;
+         height: 1px;
+         border: none;
+         border-color: transparent;
+         background-color: $secondary-color-two;
+      }
+   }
 }
-.box__gallery{
+.box__gallery {
    width: 100%;
    display: flex;
    flex-wrap: wrap;
    align-items: flex-start;
    justify-content: space-between;
-   a{
+   a {
       display: block;
       width: 25%;
       position: relative;
@@ -30,10 +41,10 @@
       overflow: hidden;
       border: 4px solid $secondary-color;
       transition: opacity 0.3s linear;
-      img{
+      img {
          transition: transform 0.3s linear;
       }
-      &::after{
+      &::after {
          content: "";
          background: transparent url(../img/gallery__page/eye-icon.png) no-repeat center;
          position: absolute;
@@ -46,19 +57,19 @@
          visibility: hidden;
          transition: opacity 0.3s linear, visibility 0.3s linear;
       }
-      &:hover{
+      &:hover {
          opacity: 0.7;
-         img{
+         img {
             transform: scale(1.1);
          }
-         &::after{
+         &::after {
             opacity: 1;
             visibility: visible;
          }
       }
    }
 }
-.gallery__img--title{
+.gallery__img--title {
    font-family: $font-secondary;
    font-weight: 600;
 }
