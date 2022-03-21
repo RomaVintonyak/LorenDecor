@@ -130,10 +130,40 @@
             </h3>
          </div><!--/.title-->
          <div class="page__contact--form">
-            <form class="contact__form" id="contactForm">
-
+            <form class="wow fadeInLeft contact__form" id="contactForm" data-wow-duration="1.5s" data-wow-delay="0.5s">
+               <div class="contact__form--block">
+                  <i class="fas fa-user"></i>
+                  <input type="text" id="name" name="name">
+                  <label for="name">Ваше ім'я</label>
+                  <p class="error__name" id="errorName" style="display: none;">Введіть Ваше ім'я...</p>
+               </div><!--/.block-->
+               <div class="contact__form--block">
+                  <i class="fas fa-envelope"></i>
+                  <input type="email" id="email" name="email">
+                  <label for="email">Ваш email</label>
+                  <p class="error__email" id="errorEmail" style="display: none;">Введіть коректну email адресу...</p>
+               </div><!--/.block-->
+               <div class="contact__form--block">
+                  <i class="fas fa-phone-volume"></i>
+                  <input type="tel" id="phone" name="phone">
+                  <label for="phone">Ваш телефон</label>
+                  <p class="error__phone" id="errorPhone" style="display: none;">Введіть Ваш номер телефону...</p>
+               </div><!--/.block-->
+               <div class="contact__form--block">
+                  <i class="fas fa-pencil-alt"></i>
+                  <textarea name="message" id="message" rows="1"></textarea>
+                  <label for="message">Залиште повідомлення</label>
+                  <p class="error__message" id="errorMessage" style="display: none;">Ваше повідомлення (мінімум 10 символів)...</p>
+               </div><!--/.block-->
+               <div class="contact__form--button text__center">
+                  <button class="waves waves-light waves-effect" id="sendMail" type="button">
+                     Відправити
+                     <i class="fas fa-paper-plane"></i>
+                  </button>
+               </div><!--/.button-->
+               <div class="error__text" id="errorText"></div>
             </form><!--/.contact__form-->
-            <div class="contact__block">
+            <div class="wow fadeInRight contact__block" data-wow-duration="1.5s" data-wow-delay="0.5s">
                <div class="contact__block--line">
                   <i class="fas fa-map"></i>
                   <span>Працюємо у межах м. Івано - Франківськ та області</span>
