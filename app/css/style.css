@@ -528,7 +528,7 @@ a:focus {
     font-weight: 700;
     letter-spacing: 0.8rem;
     color: #000000;
-    background: url("../../img/intro/7.JPG") no-repeat center;
+    background: url("../img/intro/7.JPG") no-repeat center;
     background-size: cover;
     mix-blend-mode: lighten;
     -webkit-background-clip: text;
@@ -1660,15 +1660,22 @@ a:focus {
 .contact__form--block {
     width: 100%;
     position: relative;
-    margin-bottom: 3.5rem;
+    margin-bottom: 4.5rem;
 }
 
 .contact__form--block i {
+    position: absolute;
+    bottom: 0;
+    left: 0;
     font-size: 2.5rem;
     color: #C18D7A;
 }
 
 .contact__form--block input {
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: #000000;
+    font-family: "Quicksand", sans-serif;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -1687,7 +1694,7 @@ a:focus {
 .contact__form--block label {
     position: relative;
     top: -1rem;
-    left: 6%;
+    left: 9%;
     font-size: 1.6rem;
     font-weight: 400;
     color: #000000;
@@ -1696,6 +1703,10 @@ a:focus {
 }
 
 .contact__form--block textarea {
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: #000000;
+    font-family: "Quicksand", sans-serif;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -1728,6 +1739,7 @@ a:focus {
     background-color: #F9EFED;
     border-bottom-left-radius: 2rem;
     border-top-right-radius: 2rem;
+    border: 1px solid #ebc3bc;
     transition: background-color 0.2s linear;
 }
 
@@ -1782,17 +1794,17 @@ a:focus {
 
 #name:focus ~ label[for="name"] {
     font-size: 1.2rem;
-    top: -2.5rem;
+    top: -2.7rem;
 }
 
 #email:focus ~ label[for="email"] {
     font-size: 1.2rem;
-    top: -2.5rem;
+    top: -2.7rem;
 }
 
 #phone:focus ~ label[for="phone"] {
     font-size: 1.2rem;
-    top: -2.5rem;
+    top: -2.7rem;
 }
 
 #message:focus ~ label[for="message"] {
