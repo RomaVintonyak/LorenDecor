@@ -421,8 +421,38 @@ a:focus {
     width: 15%;
 }
 
+@media (max-width: 991px) {
+    .navbar__brand {
+        width: 20%;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar__brand {
+        width: 25%;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar__brand {
+        width: 30%;
+    }
+}
+
+@media (max-width: 450px) {
+    .navbar__brand {
+        width: 35%;
+    }
+}
+
 .navbar__menu {
     width: 85%;
+}
+
+@media (max-width: 991px) {
+    .navbar__menu {
+        display: none;
+    }
 }
 
 .main__menu {
@@ -479,6 +509,104 @@ a:focus {
     transition: color 0.3s linear;
 }
 
+/*burger button*/
+.burger__btn {
+    position: relative;
+    height: 4.9rem;
+    width: 4.9rem;
+    background-color: #C18D7A;
+    border-bottom-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    transition: background-color 0.1s linear, border 0.1s linear, transform 0.02s linear;
+    display: none;
+}
+
+.burger__btn--active span:first-child {
+    margin-top: 0;
+}
+
+.burger__btn--active span:last-child {
+    margin-top: 0;
+}
+
+.burger__btn span {
+    position: absolute;
+    top: calc(50% - 0.1rem);
+    left: calc(50% - 1rem);
+    width: 2rem;
+    height: 0.2rem;
+    background-color: #F9EFED;
+    transition: background-color 0.1s linear, margin-top 0.2s linear, opacity 0.2s linear, visibility 0.2s linear, transform 0.2s linear;
+}
+
+.burger__btn span:first-child {
+    margin-top: -0.6rem;
+}
+
+.burger__btn span:last-child {
+    margin-top: 0.6rem;
+}
+
+.burger__btn:hover {
+    cursor: pointer;
+    border: 1.5px solid #C18D7A;
+    background-color: #F9EFED;
+}
+
+.burger__btn:hover span {
+    background-color: #C18D7A;
+}
+
+.burger__btn:active {
+    transform: scale(0.95);
+}
+
+.burger__btn--active span:first-child {
+    margin-top: 0 !important;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.burger__btn--active span:nth-child(2) {
+    transform: rotate(45deg);
+}
+
+.burger__btn--active span:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+.burger__btn--active span:last-child {
+    margin-top: 0 !important;
+    opacity: 0;
+    visibility: hidden;
+}
+
+@media (max-width: 991px) {
+    .burger__btn {
+        display: block;
+    }
+}
+
+/*.burger__btn--active{
+   span{
+      &:first-child{
+         margin-top: 0;
+         opacity: 0;
+         visibility: hidden;
+      }
+      &:nth-child(2){
+         transform: rotate(45deg);
+      }
+      &:nth-child(3){
+         transform: rotate(-45deg);
+      }
+      &:last-child{
+         margin-top: 0;
+         opacity: 0;
+         visibility: hidden;
+      }
+   }
+}*/
 /*intro*/
 .intro {
     width: 100%;
@@ -2639,6 +2767,73 @@ body.lb-disable-scrolling {
 .fadeInRight {
     -webkit-animation-name: fadeInRight;
     animation-name: fadeInRight;
+}
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.animated.infinite {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.animated.delay-1s {
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+.animated.delay-2s {
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+}
+
+.animated.delay-3s {
+    -webkit-animation-delay: 3s;
+    animation-delay: 3s;
+}
+
+.animated.delay-4s {
+    -webkit-animation-delay: 4s;
+    animation-delay: 4s;
+}
+
+.animated.delay-5s {
+    -webkit-animation-delay: 5s;
+    animation-delay: 5s;
+}
+
+.animated.fast {
+    -webkit-animation-duration: 800ms;
+    animation-duration: 800ms;
+}
+
+.animated.faster {
+    -webkit-animation-duration: 500ms;
+    animation-duration: 500ms;
+}
+
+.animated.slow {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+}
+
+.animated.slower {
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+}
+
+@media (print), (prefers-reduced-motion: reduce) {
+    .animated {
+        -webkit-animation-duration: 1ms !important;
+        animation-duration: 1ms !important;
+        transition-duration: 1ms !important;
+        -webkit-animation-iteration-count: 1 !important;
+        animation-iteration-count: 1 !important;
+    }
 }
 
 /*simple lightbox gallery*/

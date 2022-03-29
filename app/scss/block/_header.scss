@@ -40,9 +40,24 @@
 }
 .navbar__brand{
    width: 15%;
+   @include tablet{
+      width: 20%;
+   }
+   @include mobile{
+      width: 25%;
+   }
+   @include mobile-sm{
+      width: 30%;
+   }
+   @include mobile-xsm{
+      width: 35%;
+   }
 }
 .navbar__menu{
    width: 85%;
+   @include tablet{
+      display: none;
+   }
 }
 .main__menu{
    display: flex;

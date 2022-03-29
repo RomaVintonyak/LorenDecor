@@ -44,6 +44,12 @@ jQuery(document).ready(function () {
       header.removeClass("header__fixed");
     }
   });
+  //burger btn function
+  var burgerBtn = $("#burgerBtn");
+  burgerBtn.on("click", function(event){
+    event.preventDefault();
+    $(this).toggleClass("burger__btn--active");
+  });
   //scroll dwn Intro Btn
   var introBtnDwn = $("#btnIntroScroll");
   introBtnDwn.on("click", function (event) {
@@ -320,7 +326,6 @@ jQuery(document).ready(function () {
     alertError: true,
     alertErrorMessage: 'Image not found, next image will be loaded',
   });
-  console.log(galleryPage);
   //gallery slider otions
   var gSlider = $("#gallerySlider");
   gSlider.slick({

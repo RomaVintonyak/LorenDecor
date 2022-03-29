@@ -1,0 +1,93 @@
+//*mixins*//
+@import "./mixin.scss";
+
+.burger__btn{
+   position: relative;
+   height: 4.9rem;
+   width: 4.9rem;
+   background-color: $secondary-color-two;
+   border-bottom-left-radius: 2rem;
+   border-top-right-radius: 2rem;
+   transition: background-color 0.1s linear, border 0.1s linear, transform 0.02s linear;
+   display: none;
+   &--active{
+      span{
+         &:first-child{
+            margin-top: 0;
+         }
+         &:last-child{
+            margin-top: 0;
+         }
+      }
+   }
+   span{
+      position: absolute;
+      top: calc(50% - 0.1rem);
+      left: calc(50% - 1rem);
+      width: 2rem;
+      height: 0.2rem;
+      background-color: $secondary-color;
+      transition: background-color 0.1s linear, margin-top 0.2s linear, opacity 0.2s linear, visibility 0.2s linear,
+                  transform 0.2s linear;
+      &:first-child{
+         margin-top: -0.6rem;
+      }
+      &:last-child{
+         margin-top: 0.6rem;
+      }
+   }
+   &:hover{
+      cursor: pointer;
+      border: 1.5px solid $secondary-color-two;
+      background-color: $secondary-color;
+      span{
+         background-color: $secondary-color-two;
+      }
+   }
+   &:active{
+      transform: scale(0.95);
+   }
+   &--active{
+      span{
+         &:first-child{
+            margin-top: 0!important;
+            opacity: 0;
+            visibility: hidden;
+         }
+         &:nth-child(2){
+            transform: rotate(45deg);
+         }
+         &:nth-child(3){
+            transform: rotate(-45deg);
+         }
+         &:last-child{
+            margin-top: 0!important;
+            opacity: 0;
+            visibility: hidden;
+         }
+      }
+   }
+   @include tablet{
+      display: block;
+   }
+}
+/*.burger__btn--active{
+   span{
+      &:first-child{
+         margin-top: 0;
+         opacity: 0;
+         visibility: hidden;
+      }
+      &:nth-child(2){
+         transform: rotate(45deg);
+      }
+      &:nth-child(3){
+         transform: rotate(-45deg);
+      }
+      &:last-child{
+         margin-top: 0;
+         opacity: 0;
+         visibility: hidden;
+      }
+   }
+}*/
