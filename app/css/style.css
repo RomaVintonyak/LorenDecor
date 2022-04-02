@@ -424,6 +424,8 @@ a:focus {
 @media (max-width: 991px) {
     .navbar__brand {
         width: 20%;
+        position: relative;
+        z-index: 30;
     }
 }
 
@@ -447,11 +449,36 @@ a:focus {
 
 .navbar__menu {
     width: 85%;
+    transition: left 0.3s linear;
+}
+
+.navbar__menu--mobile {
+    left: 0 !important;
 }
 
 @media (max-width: 991px) {
     .navbar__menu {
-        display: none;
+        position: absolute;
+        top: 0;
+        left: -35%;
+        z-index: 25;
+        width: 35%;
+        height: 100vh;
+        background-color: #F9EFED;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar__menu {
+        width: 50%;
+        left: -50%;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar__menu {
+        width: 100%;
+        left: -100%;
     }
 }
 
@@ -471,6 +498,12 @@ a:focus {
 
 .main__menu--item:first-child {
     margin-left: 0;
+}
+
+@media (max-width: 991px) {
+    .main__menu--item:first-child {
+        margin-left: 3rem;
+    }
 }
 
 .main__menu--item::before {
@@ -507,6 +540,16 @@ a:focus {
     font-size: 1.6rem;
     font-family: "Quicksand", sans-serif;
     transition: color 0.3s linear;
+}
+
+@media (max-width: 991px) {
+    .main__menu {
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
 }
 
 /*burger button*/
@@ -584,29 +627,10 @@ a:focus {
 @media (max-width: 991px) {
     .burger__btn {
         display: block;
+        z-index: 30;
     }
 }
 
-/*.burger__btn--active{
-   span{
-      &:first-child{
-         margin-top: 0;
-         opacity: 0;
-         visibility: hidden;
-      }
-      &:nth-child(2){
-         transform: rotate(45deg);
-      }
-      &:nth-child(3){
-         transform: rotate(-45deg);
-      }
-      &:last-child{
-         margin-top: 0;
-         opacity: 0;
-         visibility: hidden;
-      }
-   }
-}*/
 /*intro*/
 .intro {
     width: 100%;
@@ -649,6 +673,48 @@ a:focus {
     color: #000000;
 }
 
+@media (max-width: 991px) {
+    .intro__content p {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .intro__content p {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .intro__content p {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 1366px) {
+    .intro__content {
+        width: 50%;
+    }
+}
+
+@media (max-width: 991px) {
+    .intro__content {
+        width: 60%;
+    }
+}
+
+@media (max-width: 768px) {
+    .intro__content {
+        width: 70%;
+    }
+}
+
+@media (max-width: 576px) {
+    .intro__content {
+        width: 80%;
+    }
+}
+
 .main__title {
     text-transform: uppercase;
     font-family: "Libre Baskerville", serif;
@@ -665,6 +731,32 @@ a:focus {
     margin-bottom: 2rem;
 }
 
+@media (max-width: 1366px) {
+    .main__title {
+        font-size: 8rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .main__title {
+        font-size: 6rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .main__title {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .main__title {
+        font-size: 3rem;
+    }
+}
+
 .main__suptitle {
     font-family: "Libre Baskerville", serif;
     font-weight: 600;
@@ -672,6 +764,43 @@ a:focus {
     height: 6rem;
     color: #C18D7A;
     margin-bottom: 2rem;
+}
+
+@media (max-width: 1366px) {
+    .main__suptitle {
+        font-size: 3.5rem;
+        height: 5rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .main__suptitle {
+        font-size: 3rem;
+        height: 4rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .main__suptitle {
+        font-size: 2.5rem;
+        height: 3.5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .main__suptitle {
+        font-size: 2rem;
+        height: 3rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .main__suptitle {
+        font-size: 1.7rem;
+        height: 2.6rem;
+    }
 }
 
 .intro__scroll {
@@ -711,15 +840,60 @@ a:focus {
     animation-delay: -0.6s;
 }
 
+@media (max-width: 991px) {
+    .intro__scroll span {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-bottom: 0.3rem solid #C18D7A;
+        border-right: 0.3rem solid #C18D7A;
+    }
+}
+
+@media (max-width: 768px) {
+    .intro__scroll span {
+        width: 2rem;
+        height: 2rem;
+        border-bottom: 0.2rem solid #C18D7A;
+        border-right: 0.2rem solid #C18D7A;
+    }
+}
+
+@media (max-width: 450px) {
+    .intro__scroll span {
+        width: 1.5rem;
+        height: 1.5rem;
+        border-bottom: 0.1rem solid #C18D7A;
+        border-right: 0.1rem solid #C18D7A;
+    }
+}
+
 .intro__scroll:hover {
     cursor: pointer;
+}
+
+@media (max-width: 991px) {
+    .intro__scroll {
+        height: 8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .intro__scroll {
+        height: 6rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .intro__scroll {
+        height: 4rem;
+    }
 }
 
 .intro__asside {
     position: absolute;
     width: 0;
     height: 0;
-    right: 2%;
+    left: 97.5%;
     bottom: 50%;
     z-index: 2;
 }
@@ -869,6 +1043,12 @@ a:focus {
     right: -3rem;
 }
 
+@media (max-width: 1366px) {
+    .about__row--img::before {
+        display: none;
+    }
+}
+
 .about__row--img::after {
     content: "";
     display: block;
@@ -879,6 +1059,12 @@ a:focus {
     z-index: 1;
     bottom: -3rem;
     left: -3rem;
+}
+
+@media (max-width: 1366px) {
+    .about__row--img::after {
+        display: none;
+    }
 }
 
 .about__row--img img {
@@ -2295,7 +2481,7 @@ body.lb-disable-scrolling {
     list-style-type: none;
     position: absolute;
     top: 0;
-    right: -6%;
+    left: 100%;
     z-index: 2;
     height: 100%;
     display: flex;
@@ -2336,7 +2522,7 @@ body.lb-disable-scrolling {
 
 .intro-dots li:hover button {
     cursor: pointer;
-    width: 3.5rem;
+    width: 2.5rem;
     height: 0.4rem;
     border-radius: 0;
     position: relative;
@@ -2364,8 +2550,23 @@ body.lb-disable-scrolling {
     transform: rotate(45deg);
 }
 
+@media (max-width: 1366px) {
+    .intro-dots {
+        top: 102%;
+        flex-direction: row;
+        height: 0;
+        left: calc(50% - 80px);
+    }
+}
+
+@media (max-height: 768px) {
+    .intro-dots {
+        display: none !important;
+    }
+}
+
 .intro-dots .slick-active button {
-    width: 3.5rem;
+    width: 2.5rem;
     height: 0.4rem;
     border-radius: 0;
     position: relative;

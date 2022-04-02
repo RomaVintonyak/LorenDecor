@@ -35,6 +35,27 @@
       font-weight: 600;
       font-size: 2rem;
       color: $black;
+      @include tablet{
+         font-size: 1.8rem;
+      }
+      @include mobile{
+         font-size: 1.6rem;
+      }
+      @include mobile-sm{
+         font-size: 1.4rem;
+      }
+   }
+   @include notebook {
+      width: 50%;
+   }
+   @include tablet {
+      width: 60%;
+   }
+   @include mobile {
+      width: 70%;
+   }
+   @include mobile-sm {
+      width: 80%;
    }
 }
 .main__title {
@@ -50,6 +71,20 @@
    background-clip: text;
    -webkit-text-fill-color: transparent;
    margin-bottom: 2rem;
+   @include notebook {
+      font-size: 8rem;
+   }
+   @include tablet {
+      font-size: 6rem;
+      margin-bottom: 1.5rem;
+   }
+   @include mobile {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+   }
+   @include mobile-sm {
+      font-size: 3rem;
+   }
 }
 .main__suptitle {
    font-family: $font-primary;
@@ -58,6 +93,28 @@
    height: 6rem;
    color: $secondary-color-two;
    margin-bottom: 2rem;
+   @include notebook {
+      font-size: 3.5rem;
+      height: 5rem;
+   }
+   @include tablet {
+      font-size: 3rem;
+      height: 4rem;
+      margin-bottom: 1.5rem;
+   }
+   @include mobile {
+      font-size: 2.5rem;
+      height: 3.5rem;
+      margin-bottom: 1rem;
+   }
+   @include mobile-sm {
+      font-size: 2rem;
+      height: 3rem;
+   }
+   @include mobile-xsm {
+      font-size: 1.7rem;
+      height: 2.6rem;
+   }
 }
 .intro__scroll {
    position: absolute;
@@ -85,16 +142,43 @@
       &:nth-child(4) {
          animation-delay: -0.6s;
       }
+      @include tablet{
+         width: 2.5rem;
+         height: 2.5rem;
+         border-bottom: 0.3rem solid $secondary-color-two;
+         border-right: 0.3rem solid $secondary-color-two;
+      }
+      @include mobile{
+         width: 2rem;
+         height: 2rem;
+         border-bottom: 0.2rem solid $secondary-color-two;
+         border-right: 0.2rem solid $secondary-color-two;
+      }
+      @include mobile-xsm{
+         width: 1.5rem;
+         height: 1.5rem;
+         border-bottom: 0.1rem solid $secondary-color-two;
+         border-right: 0.1rem solid $secondary-color-two;
+      }
    }
    &:hover {
       cursor: pointer;
+   }
+   @include tablet{
+      height: 8rem;
+   }
+   @include mobile{
+      height: 6rem;
+   }
+   @include mobile-xsm{
+      height: 4rem;
    }
 }
 .intro__asside {
    position: absolute;
    width: 0;
    height: 0;
-   right: 2%;
+   left: 97.5%;
    bottom: 50%;
    z-index: 2;
 }

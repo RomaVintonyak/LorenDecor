@@ -49,6 +49,7 @@ jQuery(document).ready(function () {
   burgerBtn.on("click", function(event){
     event.preventDefault();
     $(this).toggleClass("burger__btn--active");
+    $(".navbar__menu").toggleClass("navbar__menu--mobile");
   });
   //scroll dwn Intro Btn
   var introBtnDwn = $("#btnIntroScroll");

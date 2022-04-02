@@ -40,6 +40,9 @@
          z-index: 1;
          top: -3rem;
          right: -3rem;
+         @include notebook{
+            display: none;
+         }
       }
       &::after {
          content: "";
@@ -51,6 +54,9 @@
          z-index: 1;
          bottom: -3rem;
          left: -3rem;
+         @include notebook{
+            display: none;
+         }
       }
       img {
          position: relative;

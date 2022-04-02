@@ -69,25 +69,6 @@
    }
    @include tablet{
       display: block;
+      z-index: 30;
    }
 }
-/*.burger__btn--active{
-   span{
-      &:first-child{
-         margin-top: 0;
-         opacity: 0;
-         visibility: hidden;
-      }
-      &:nth-child(2){
-         transform: rotate(45deg);
-      }
-      &:nth-child(3){
-         transform: rotate(-45deg);
-      }
-      &:last-child{
-         margin-top: 0;
-         opacity: 0;
-         visibility: hidden;
-      }
-   }
-}*/
