@@ -345,12 +345,15 @@ jQuery(document).ready(function () {
         breakpoint: 1366,
         settings: {
           slidesToShow: 3,
+          arrows: false,
+          swipe: true,
         },
       },
       {
         breakpoint: 991,
         settings: {
           slidesToShow: 2,
+          arrows: false,
         },
       },
       {
@@ -359,8 +362,7 @@ jQuery(document).ready(function () {
           slidesToShow: 1,
           dots: false,
           fade: true,
-          swipe: true,
-          touchMove: true,
+          arrows: false,
         },
       },
     ],

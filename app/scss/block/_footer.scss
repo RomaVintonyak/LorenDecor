@@ -13,6 +13,12 @@
          color: $black;
          font-size: 1.7rem;
          font-family: $font-secondary; 
+         @include mobile{
+            font-size: 1.6rem;
+         }
+         @include mobile-sm{
+            font-size: 1.5rem;
+         }
       }
    }
 }
@@ -49,6 +55,10 @@
    display: flex;
    justify-content: space-between;
    align-items: flex-start;
+   @include mobile{
+      justify-content: center;
+      flex-wrap: wrap;
+   }
 }
 .footer__col{
    width: 20%;
@@ -141,5 +151,18 @@
             color: $secondary-color-two;
          }
       }
+   }
+   @include tablet{
+      width: 30%;
+   }
+   @include mobile{
+      width: 80%;
+      margin-top: 2rem;
+      &:first-child{
+         margin-top: 0;
+      }
+   }
+   @include mobile-sm{
+      width: 100%;
    }
 }

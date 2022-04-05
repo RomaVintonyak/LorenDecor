@@ -6,7 +6,7 @@
    width: 4.9rem;
    top: 15vh;
    left: 2%;
-   z-index: 15;
+   z-index: 1100;
    background-color: $secondary-color;
    border-bottom-left-radius: 2rem;
    border-top-right-radius: 2rem;
@@ -29,5 +29,8 @@
          border-bottom: 0;
          border-bottom-color: transparent;
       }
+   }
+   @include mobile{
+      top: 18vh;
    }
 }

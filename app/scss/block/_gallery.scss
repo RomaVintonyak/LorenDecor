@@ -8,6 +8,9 @@
       font-size: 3rem;
       font-family: $font-secondary;
       margin-bottom: 2rem;
+      @include mobile{
+         font-size: 2rem;
+      }
    }
 }
 .gallery__slider{

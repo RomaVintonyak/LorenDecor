@@ -1,17 +1,24 @@
 //*mixins*//
 @import "./mixin.scss";
 
-.aboutUsP__main{
-   &--row{
+.aboutUsP__main {
+   &--row {
       text-align: center;
-      h3{
+      h3 {
          font-family: $font-secondary;
          font-weight: 600;
          font-size: 3rem;
          color: $black;
-         margin-bottom: 1.5rem;  
+         margin-bottom: 1.5rem;
+         @include tablet {
+            font-size: 2.5rem;
+         }
+         @include mobile {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+         }
       }
-      p{
+      p {
          font-family: $font-secondary;
          color: $black;
          font-size: 1.6rem;
@@ -19,17 +26,20 @@
          text-align: justify;
          width: 80%;
          margin: 0 auto;
+         @include tablet {
+            width: 100%;
+         }
       }
    }
 }
-.about__stage{
+.about__stage {
    text-align: center;
-   &--row{
+   &--row {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: flex-start;
-      hr{
+      hr {
          margin: 0;
          width: 100%;
          height: 1px;
@@ -38,30 +48,53 @@
          background-color: $secondary-color-two;
          margin-top: 3.5rem;
       }
+      @include mobile {
+         justify-content: center;
+      }
    }
 }
-.stage__title{
+.stage__title {
    font-family: $font-secondary;
    font-weight: 600;
    font-size: 3rem;
    color: $black;
-   margin-bottom: 1.5rem;  
+   margin-bottom: 1.5rem;
+   @include tablet {
+      font-size: 2.5rem;
+   }
+   @include mobile {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+   }
 }
-.stage__collum{
+.stage__collum {
    width: 50%;
    margin-top: 2rem;
-   i{
+   i {
       color: $secondary-color-two;
       margin-bottom: 1.5rem;
+      @include mobile {
+         font-size: 3.5rem;
+         margin-bottom: 1rem;
+      }
+      @include mobile-sm {
+         font-size: 2.5rem;
+      }
    }
-   h4{
+   h4 {
       font-family: $font-secondary;
       font-weight: 600;
       font-size: 2rem;
       color: $black;
-      margin-bottom: 1.5rem;  
+      margin-bottom: 1.5rem;
+      @include tablet {
+         width: 95%;
+      }
+      @include mobile {
+         width: 100%;
+      }
    }
-   p{
+   p {
       font-family: $font-secondary;
       color: $black;
       font-size: 1.6rem;
@@ -69,5 +102,16 @@
       text-align: justify;
       width: 80%;
       margin: 0 auto;
+      @include mobile {
+         width: 100%;
+      }
+   }
+   @include mobile {
+      width: 85%;
+      margin-top: 1.5rem;
+   }
+   @include mobile-sm {
+      width: 100%;
+      margin-top: 1rem;
    }
 }
