@@ -10,6 +10,12 @@
          font-weight: 600;
          font-size: 3rem;
          color: $black;
+         @include tablet{
+            font-size: 2rem;
+         }
+      }
+      @include tablet{
+         margin-bottom: 2rem;
       }
    }
    &--row {
@@ -17,6 +23,12 @@
       justify-content: space-between;
       align-items: flex-start;
       flex-wrap: wrap;
+      @include tablet{
+         justify-content: space-around;
+      }
+      @include mobile{
+         justify-content: center;
+      }
    }
    &--overlay {
       width: 100%;
@@ -33,6 +45,9 @@
             transform: scale(1.1);
          }
       }
+      @include mobile{
+         height: 25rem;
+      }
    }
    &--body {
       padding: 1.25rem;
@@ -43,6 +58,9 @@
          font-size: 2rem;
          color: $black;
          margin-bottom: 1.5rem;
+         @include tablet{
+            margin-bottom: 1rem;
+         }
       }
       p{
          font-family: $font-secondary;
@@ -61,6 +79,9 @@
          border-color: transparent;
          background-color: $secondary-color-two;
       }
+      @include mobile{
+         margin-top: 0;
+      }
    }
 }
 .card__coll {
@@ -75,5 +96,25 @@
    transition: box-shadow 0.2s linear;
    &:hover {
       box-shadow: -1px 9px 40px -12px #191919;
+   }
+   @include notebook{
+      height: 45rem;
+   }
+   @include tablet{
+      width: 42%;
+      margin-bottom: 2rem;
+      height: 44rem;
+   }
+   @include mobile{
+      width: 57%;
+   }
+   @include mobile-sm{
+      width: 80%;
+   }
+   @include mobile-xsm{
+      width: 90%;
+   }
+   @include mobile-xxsm{
+      width: 100%;
    }
 }

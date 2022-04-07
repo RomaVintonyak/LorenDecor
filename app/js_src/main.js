@@ -46,7 +46,7 @@ jQuery(document).ready(function () {
   });
   //burger btn function
   var burgerBtn = $("#burgerBtn");
-  burgerBtn.on("click", function(event){
+  burgerBtn.on("click", function (event) {
     event.preventDefault();
     $(this).toggleClass("burger__btn--active");
     $(".navbar__menu").toggleClass("navbar__menu--mobile");
@@ -116,52 +116,66 @@ jQuery(document).ready(function () {
   jumpCard.mouseleave(function () {
     jumpCard.removeAttr("style");
   });
+    //more project load in page gallery
+    var itemProject = $("._projectItem");
+    var loadProject = $("#galleryButton");
+    var sliceCount = 0;
+    var wWidth = $(window).width();
+    if (wWidth < 768) {
+      itemProject.hide();
+      itemProject.slice(0, 4).show();
+      sliceCount = 2;
+    }
+    loadProject.on("click", function (event) {
+      event.preventDefault();
+      $("._projectItem:hidden").slice(0, sliceCount).slideDown("slow");
+    });
   //active style to label in contact form
   var nameField = $("#name");
-  nameField.blur( function(){
+  nameField.blur(function () {
     var nameFieldData = $(this).val();
-    if(nameFieldData.length >= 1){
+    if (nameFieldData.length >= 1) {
       $("#lebelName").css({
         "font-size": "1.2rem",
         "top": "-2.7rem"
       });
-    }else{
+    } else {
       $("#lebelName").removeAttr("style");
     }
   });
   var emailField = $("#email");
-  emailField.blur( function(){
+  emailField.blur(function () {
     var emailFieldData = $(this).val();
-    if(emailFieldData.length >= 1){
+    if (emailFieldData.length >= 1) {
       $("#labelEmail").css({
         "font-size": "1.2rem",
         "top": "-2.7rem"
       });
-    }else{
+    } else {
       $("#labelEmail").removeAttr("style");
     }
   });
   var phoneField = $("#phone");
-  phoneField.blur( function(){
+  phoneField.blur(function () {
     var phoneFieldData = $(this).val();
-    if(phoneFieldData.length >= 1){
+    if (phoneFieldData.length >= 1) {
       $("#labelPhone").css({
         "font-size": "1.2rem",
         "top": "-2.7rem"
       });
-    }else{
+    } else {
       $("#labelPhone").removeAttr("style");
     }
   });
   var messageField = $("#message");
-  messageField.blur( function(){
+  messageField.blur(function () {
     var messageFieldData = $(this).val();
-    if(messageFieldData.length >= 1){
+    if (messageFieldData.length >= 1) {
       $("#labelMessage").css({
         "font-size": "1.2rem",
         "top": "-3.5rem"
       });
-    }else{
+    } else {
       $("#labelMessage").removeAttr("style");
     }
   });

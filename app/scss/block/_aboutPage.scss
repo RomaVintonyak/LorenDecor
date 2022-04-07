@@ -47,6 +47,9 @@
          border-color: transparent;
          background-color: $secondary-color-two;
          margin-top: 3.5rem;
+         @include tablet {
+            margin-top: 2rem;
+         }
       }
       @include mobile {
          justify-content: center;

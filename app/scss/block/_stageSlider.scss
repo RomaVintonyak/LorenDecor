@@ -8,11 +8,15 @@
       align-items: flex-start;
       justify-content: space-between;
       width: 100%;
+      @include tablet {
+         justify-content: center;
+         flex-wrap: wrap;
+      }
    }
-   &--content{
+   &--content {
       margin-top: 3.5rem;
       text-align: center;
-      hr{
+      hr {
          margin: 0;
          margin-bottom: 3.5rem;
          width: 100%;
@@ -20,17 +24,33 @@
          border: none;
          border-color: transparent;
          background-color: $secondary-color-two;
+         @include tablet {
+            margin-bottom: 2rem;
+         }
       }
-      p{
+      p {
          font-family: $font-secondary;
          color: $black;
          font-size: 1.6rem;
          font-weight: 400;
       }
+      @include tablet {
+         margin-top: 2rem;
+      }
+   }
+   @include tablet {
+      margin-top: 2rem;
    }
 }
 .stageSliderBlock {
    width: 49%;
+   @include tablet {
+      width: 80%;
+      margin-bottom: 2rem;
+   }
+   @include mobile {
+      width: 100%;
+   }
 }
 .stage__check {
    width: 49%;
@@ -40,6 +60,9 @@
       font-size: 2rem;
       color: $black;
       margin-bottom: 3rem;
+      @include tablet {
+         margin-bottom: 2rem;
+      }
    }
    &--list {
       margin: 0;
@@ -56,5 +79,11 @@
             font-weight: 400;
          }
       }
+   }
+   @include tablet {
+      width: 80%;
+   }
+   @include mobile {
+      width: 100%;
    }
 }

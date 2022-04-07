@@ -10,10 +10,53 @@
          font-weight: 600;
          font-size: 3rem;
          color: $black;
+         @include tablet {
+            font-size: 2rem;
+         }
+      }
+      @include tablet {
+         margin-bottom: 2rem;
       }
    }
    &--row {
       width: 100%;
+   }
+   &--button{
+      display: none;
+      text-align: center;
+      margin-top: 6rem;
+      button{
+         border: none;
+         background-color: transparent;
+         font-family: $font-secondary;
+         font-size: 1.7rem;
+         color: $black;
+         font-weight: 400;
+         margin: 0;
+         padding: 1.5rem;
+         background-color: $secondary-color;
+         border-bottom-left-radius: 2rem;
+         border-top-right-radius: 2rem;
+         border: 1px solid $main-color-one;
+         transition: background-color 0.2s linear;
+         i {
+            margin-left: 0.5rem;
+         }
+         &:hover {
+            background-color: $main-color-one;
+            cursor: pointer;
+         }
+         &:active {
+            transform: scale(0.95);
+         }
+      }
+      @include tablet {
+         margin-top: 4rem;
+      }
+      @include mobile {
+         display: block;
+         margin-top: 2rem;
+      }
    }
    &--line {
       margin-top: 6rem;
@@ -24,6 +67,12 @@
          border: none;
          border-color: transparent;
          background-color: $secondary-color-two;
+      }
+      @include tablet {
+         margin-top: 4rem;
+      }
+      @include mobile {
+         margin-top: 2rem;
       }
    }
 }
@@ -66,6 +115,12 @@
             opacity: 1;
             visibility: visible;
          }
+      }
+      @include mobile{
+         width: 50%;
+      }
+      @include mobile-sm{
+         width: 100%;
       }
    }
 }
