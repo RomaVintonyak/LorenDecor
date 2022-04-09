@@ -10,12 +10,28 @@
          font-weight: 600;
          font-size: 3rem;
          color: $black;
+         @include tablet {
+            font-size: 2.5rem;
+         }
+         @include mobile {
+            font-size: 2rem;
+         }
+      }
+      @include tablet {
+         margin-bottom: 4rem;
+      }
+      @include mobile {
+         margin-bottom: 2rem;
       }
    }
    &--form {
       display: flex;
       align-items: flex-start;
       justify-content: space-around;
+      @include tablet {
+         flex-wrap: wrap;
+         justify-content: center;
+      }
    }
    &--line {
       margin-top: 6rem;
@@ -26,6 +42,12 @@
          border: none;
          border-color: transparent;
          background-color: $secondary-color-two;
+      }
+      @include tablet {
+         margin-top: 4rem;
+      }
+      @include mobile {
+         margin-top: 2rem;
       }
    }
 }
@@ -59,6 +81,9 @@
             outline: none;
             border-bottom-color: $secondary-color-two;
          }
+         @include mobile {
+            font-size: 1.6rem;
+         }
       }
       label {
          position: relative;
@@ -88,6 +113,12 @@
             outline: none;
             border-bottom-color: $secondary-color-two;
          }
+         @include mobile {
+            font-size: 1.6rem;
+         }
+      }
+      @include mobile {
+         margin-bottom: 3.5rem;
       }
    }
    &--button {
@@ -117,6 +148,18 @@
             transform: scale(0.95);
          }
       }
+      @include tablet {
+         margin-bottom: 1rem;
+      }
+   }
+   @include tablet {
+      width: 70%;
+   }
+   @include mobile {
+      width: 90%;
+   }
+   @include mobile-sm {
+      width: 100%;
    }
 }
 .contact__block {
@@ -138,7 +181,22 @@
          color: $black;
          font-size: 1.8rem;
          font-weight: 400;
+         @include mobile {
+            font-size: 1.6rem;
+         }
       }
+      @include mobile {
+         margin-bottom: 2rem;
+      }
+   }
+   @include tablet {
+      width: 70%;
+   }
+   @include mobile {
+      width: 90%;
+   }
+   @include mobile-sm {
+      width: 100%;
    }
 }
 .error__text {
@@ -148,6 +206,9 @@
    font-weight: 600;
    font-size: 1.6rem;
    color: $secondary-color-two;
+   @include tablet {
+      margin-bottom: 1rem;
+   }
 }
 #name:focus ~ label[for="name"] {
    font-size: 1.2rem;
