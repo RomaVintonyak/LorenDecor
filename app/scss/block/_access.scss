@@ -3,8 +3,8 @@
 
 html {
    -webkit-touch-callout: none;
-   -webkit-user-select: none;
    -khtml-user-select: none;
+   -webkit-user-select: none;
    -moz-user-select: none;
    -ms-user-select: none;
    user-select: none;
@@ -21,9 +21,8 @@ html {
    overflow: hidden;
    text-align: center;
    transition: opacity 0.2s linear, visibility 0.2s linear;
-   
-   //opacity: 0;
-   //visibility: hidden;
+   opacity: 0;
+   visibility: hidden;
 }
 .show_mesag {
    opacity: 1;
