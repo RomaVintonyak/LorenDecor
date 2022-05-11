@@ -647,11 +647,40 @@ a:focus {
     align-items: center;
 }
 
+@media (max-width: 991px) {
+    .intro__row {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
 .intro__slider {
     position: absolute;
     right: 0;
     z-index: 2;
-    width: 90%;
+    width: 92%;
+}
+
+.intro__slider::before {
+    content: "";
+    width: 98.43%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0.8%;
+    z-index: 20;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: background-color 0.3s linear;
+}
+
+.intro__slider:hover::before {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+@media (max-width: 991px) {
+    .intro__slider {
+        width: 100%;
+    }
 }
 
 .intro__content {
@@ -667,9 +696,9 @@ a:focus {
 }
 
 .intro__content p {
-    font-family: "Quicksand", sans-serif;
+    font-family: "Libre Baskerville", serif;
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 2.4rem;
     color: #000000;
 }
 
@@ -699,19 +728,11 @@ a:focus {
 
 @media (max-width: 991px) {
     .intro__content {
-        width: 60%;
-    }
-}
-
-@media (max-width: 768px) {
-    .intro__content {
-        width: 70%;
-    }
-}
-
-@media (max-width: 576px) {
-    .intro__content {
-        width: 80%;
+        width: 100%;
+        display: block;
+        height: auto;
+        text-align: right;
+        top: 10%;
     }
 }
 
@@ -762,7 +783,7 @@ a:focus {
     font-weight: 600;
     font-size: 4rem;
     height: 6rem;
-    color: #C18D7A;
+    color: #000000;
     margin-bottom: 2rem;
 }
 
@@ -1016,7 +1037,7 @@ a:focus {
     font-weight: 600;
     color: #000000;
     font-size: 3rem;
-    font-family: "Quicksand", sans-serif;
+    font-family: "Libre Baskerville", serif;
     margin-bottom: 1.5rem;
 }
 
@@ -1207,7 +1228,7 @@ a:focus {
     font-weight: 600;
     color: #000000;
     font-size: 3rem;
-    font-family: "Quicksand", sans-serif;
+    font-family: "Libre Baskerville", serif;
 }
 
 @media (max-width: 768px) {
@@ -1343,7 +1364,7 @@ a:focus {
     font-weight: 600;
     color: #000000;
     font-size: 3rem;
-    font-family: "Quicksand", sans-serif;
+    font-family: "Libre Baskerville", serif;
     margin-bottom: 2rem;
 }
 
@@ -1377,8 +1398,8 @@ a:focus {
 .footer__social--content h4 {
     font-weight: 600;
     color: #000000;
-    font-size: 1.7rem;
-    font-family: "Quicksand", sans-serif;
+    font-size: 1.8rem;
+    font-family: "Libre Baskerville", serif;
 }
 
 @media (max-width: 768px) {
@@ -1848,7 +1869,7 @@ a:focus {
 }
 
 .aboutUsP__main--row h3 {
-    font-family: "Quicksand", sans-serif;
+    font-family: "Libre Baskerville", serif;
     font-weight: 600;
     font-size: 3rem;
     color: #000000;
@@ -1918,7 +1939,7 @@ a:focus {
 }
 
 .stage__title {
-    font-family: "Quicksand", sans-serif;
+    font-family: "Libre Baskerville", serif;
     font-weight: 600;
     font-size: 3rem;
     color: #000000;
@@ -1962,7 +1983,7 @@ a:focus {
 }
 
 .stage__collum h4 {
-    font-family: "Quicksand", sans-serif;
+    font-family: "Libre Baskerville", serif;
     font-weight: 600;
     font-size: 2rem;
     color: #000000;
@@ -2092,7 +2113,7 @@ a:focus {
 }
 
 .stage__check h4 {
-    font-family: "Quicksand", sans-serif;
+    font-family: "Libre Baskerville", serif;
     font-weight: 600;
     font-size: 2rem;
     color: #000000;
@@ -2145,7 +2166,7 @@ a:focus {
 }
 
 .services__card--title h3 {
-    font-family: "Quicksand", sans-serif;
+    font-family: "Libre Baskerville", serif;
     font-weight: 600;
     font-size: 3rem;
     color: #000000;
@@ -2211,9 +2232,9 @@ a:focus {
 }
 
 .services__card--body h4 {
-    font-family: "Quicksand", sans-serif;
+    font-family: "Libre Baskerville", serif;
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: #000000;
     margin-bottom: 1.5rem;
 }
@@ -2311,7 +2332,7 @@ a:focus {
 }
 
 .page__gallery--title h3 {
-    font-family: "Quicksand", sans-serif;
+    font-family: "Libre Baskerville", serif;
     font-weight: 600;
     font-size: 3rem;
     color: #000000;
@@ -2479,7 +2500,7 @@ a:focus {
 }
 
 .page__contact--title h3 {
-    font-family: "Quicksand", sans-serif;
+    font-family: "Libre Baskerville", serif;
     font-weight: 600;
     font-size: 3rem;
     color: #000000;
@@ -3252,6 +3273,12 @@ body.lb-disable-scrolling {
         flex-direction: row;
         height: 0;
         left: calc(50% - 80px);
+    }
+}
+
+@media (max-width: 991px) {
+    .intro-dots {
+        display: none !important;
     }
 }
 

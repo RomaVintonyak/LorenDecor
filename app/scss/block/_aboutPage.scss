@@ -5,7 +5,7 @@
    &--row {
       text-align: center;
       h3 {
-         font-family: $font-secondary;
+         font-family: $font-primary;
          font-weight: 600;
          font-size: 3rem;
          color: $black;
@@ -57,7 +57,7 @@
    }
 }
 .stage__title {
-   font-family: $font-secondary;
+   font-family: $font-primary;
    font-weight: 600;
    font-size: 3rem;
    color: $black;
@@ -85,7 +85,7 @@
       }
    }
    h4 {
-      font-family: $font-secondary;
+      font-family: $font-primary;
       font-weight: 600;
       font-size: 2rem;
       color: $black;
