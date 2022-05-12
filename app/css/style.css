@@ -647,13 +647,6 @@ a:focus {
     align-items: center;
 }
 
-@media (max-width: 991px) {
-    .intro__row {
-        flex-direction: column;
-        justify-content: center;
-    }
-}
-
 .intro__slider {
     position: absolute;
     right: 0;
@@ -729,10 +722,14 @@ a:focus {
 @media (max-width: 991px) {
     .intro__content {
         width: 100%;
-        display: block;
-        height: auto;
-        text-align: right;
-        top: 10%;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .intro__content {
+        align-items: flex-end;
+        justify-content: start;
     }
 }
 
@@ -767,6 +764,7 @@ a:focus {
 
 @media (max-width: 768px) {
     .main__title {
+        margin-top: 2rem;
         font-size: 4rem;
         margin-bottom: 1rem;
     }
@@ -919,6 +917,18 @@ a:focus {
     z-index: 2;
 }
 
+@media (max-width: 991px) {
+    .intro__asside {
+        bottom: 40%;
+    }
+}
+
+@media (max-width: 768px) {
+    .intro__asside {
+        bottom: 20rem;
+    }
+}
+
 .social__menu {
     margin: 0;
     padding: 0;
@@ -946,6 +956,12 @@ a:focus {
 
 .social__menu li:hover a {
     color: #C18D7A;
+}
+
+@media (max-width: 768px) {
+    .social__menu li {
+        margin-right: 1rem;
+    }
 }
 
 @-webkit-keyframes btnScroll {

@@ -13,23 +13,13 @@
    position: relative;
    display: flex;
    align-items: center;
-   
-   
-   
-   
-   @include tablet{
-      flex-direction: column;
-      justify-content: center;
-      
-   }
-
 }
 .intro__slider {
    position: absolute;
    right: 0;
    z-index: 2;
    width: 92%;
-   &::before{
+   &::before {
       content: "";
       width: 98.43%;
       height: 100%;
@@ -37,20 +27,17 @@
       top: 0;
       left: 0.8%;
       z-index: 20;
-      background-color: rgba($white,  0.3);
+      background-color: rgba($white, 0.3);
       transition: background-color 0.3s linear;
    }
-   &:hover{
-      &::before{
-         background-color: rgba($white,  0);
+   &:hover {
+      &::before {
+         background-color: rgba($white, 0);
       }
    }
-
-
-   @include tablet{
+   @include tablet {
       width: 100%;
    }
-
 }
 .intro__content {
    width: 40%;
@@ -67,28 +54,26 @@
       font-weight: 600;
       font-size: 2.4rem;
       color: $black;
-      @include tablet{
+      @include tablet {
          font-size: 1.8rem;
       }
-      @include mobile{
+      @include mobile {
          font-size: 1.6rem;
       }
-      @include mobile-sm{
+      @include mobile-sm {
          font-size: 1.4rem;
       }
    }
    @include notebook {
       width: 50%;
    }
-
-
    @include tablet {
       width: 100%;
-      //position: relative;
-      display: block;
-      height: auto;
-      text-align: right;
-      top: 10%;
+      align-items: center;
+   }
+   @include mobile {
+      align-items: flex-end;
+      justify-content: start;
    }
 }
 .main__title {
@@ -112,6 +97,7 @@
       margin-bottom: 1.5rem;
    }
    @include mobile {
+      margin-top: 2rem;
       font-size: 4rem;
       margin-bottom: 1rem;
    }
@@ -175,19 +161,19 @@
       &:nth-child(4) {
          animation-delay: -0.6s;
       }
-      @include tablet{
+      @include tablet {
          width: 2.5rem;
          height: 2.5rem;
          border-bottom: 0.3rem solid $secondary-color-two;
          border-right: 0.3rem solid $secondary-color-two;
       }
-      @include mobile{
+      @include mobile {
          width: 2rem;
          height: 2rem;
          border-bottom: 0.2rem solid $secondary-color-two;
          border-right: 0.2rem solid $secondary-color-two;
       }
-      @include mobile-xsm{
+      @include mobile-xsm {
          width: 1.5rem;
          height: 1.5rem;
          border-bottom: 0.1rem solid $secondary-color-two;
@@ -197,13 +183,13 @@
    &:hover {
       cursor: pointer;
    }
-   @include tablet{
+   @include tablet {
       height: 8rem;
    }
-   @include mobile{
+   @include mobile {
       height: 6rem;
    }
-   @include mobile-xsm{
+   @include mobile-xsm {
       height: 4rem;
    }
 }
@@ -214,6 +200,12 @@
    left: 97.5%;
    bottom: 50%;
    z-index: 2;
+   @include tablet {
+      bottom: 40%;
+   }
+   @include mobile {
+      bottom: 20rem;
+   }
 }
 .social__menu {
    margin: 0;
@@ -239,18 +231,21 @@
             color: $secondary-color-two;
          }
       }
+      @include mobile {
+         margin-right: 1rem;
+      }
    }
-}
-@keyframes btnScroll {
-   0% {
-      opacity: 0;
-      transform: translate(0, -2rem) rotate(45deg);
-   }
-   50% {
-      opacity: 1;
-   }
-   100% {
-      opacity: 0;
-      transform: translate(0, 2rem) rotate(45deg);
+   @keyframes btnScroll {
+      0% {
+         opacity: 0;
+         transform: translate(0, -2rem) rotate(45deg);
+      }
+      50% {
+         opacity: 1;
+      }
+      100% {
+         opacity: 0;
+         transform: translate(0, 2rem) rotate(45deg);
+      }
    }
 }
