@@ -21,14 +21,30 @@
    width: 92%;
    &::before {
       content: "";
-      width: 98.43%;
+      width: 98.40%;
       height: 100%;
       position: absolute;
       top: 0;
-      left: 0.8%;
+      left: 0;
+      margin-left: 1rem;
       z-index: 20;
       background-color: rgba($white, 0.3);
       transition: background-color 0.3s linear;
+      @include tablet{
+         width: 97.9%;
+      }
+      @include mobile{
+         width: 97.2%;
+      }
+      @include mobile-sm{
+         width: 96.8%;
+      }
+      @include mobile-xsm{
+         width: 96%;
+      }
+      @include mobile-xxsm{
+         width: 94.8%;
+      }
    }
    &:hover {
       &::before {

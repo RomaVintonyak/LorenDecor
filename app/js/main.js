@@ -50,6 +50,12 @@ jQuery(document).ready(function () {
     event.preventDefault();
     $(this).toggleClass("burger__btn--active");
     $(".navbar__menu").toggleClass("navbar__menu--mobile");
+    if ($(".navbar__menu").hasClass("navbar__menu--mobile")) {
+      $("body").css({ "overflow": "hidden" });
+    } else {
+      $("body").css({ "overflow": "scroll" });
+      $("body").removeAttr("style");
+    }
   });
   //scroll dwn Intro Btn
   var introBtnDwn = $("#btnIntroScroll");
@@ -116,20 +122,20 @@ jQuery(document).ready(function () {
   jumpCard.mouseleave(function () {
     jumpCard.removeAttr("style");
   });
-    //more project load in page gallery
-    var itemProject = $("._projectItem");
-    var loadProject = $("#galleryButton");
-    var sliceCount = 0;
-    var wWidth = $(window).width();
-    if (wWidth < 768) {
-      itemProject.hide();
-      itemProject.slice(0, 4).show();
-      sliceCount = 2;
-    }
-    loadProject.on("click", function (event) {
-      event.preventDefault();
-      $("._projectItem:hidden").slice(0, sliceCount).slideDown("slow");
-    });
+  //more project load in page gallery
+  var itemProject = $("._projectItem");
+  var loadProject = $("#galleryButton");
+  var sliceCount = 0;
+  var wWidth = $(window).width();
+  if (wWidth < 768) {
+    itemProject.hide();
+    itemProject.slice(0, 4).show();
+    sliceCount = 2;
+  }
+  loadProject.on("click", function (event) {
+    event.preventDefault();
+    $("._projectItem:hidden").slice(0, sliceCount).slideDown("slow");
+  });
   //active style to label in contact form
   var nameField = $("#name");
   nameField.blur(function () {
@@ -382,7 +388,7 @@ jQuery(document).ready(function () {
     ],
   });
   /**Copy protection*/
-  /*document.ondragstart = noselect;
+  document.ondragstart = noselect;
   document.onselectstart = noselect;
   document.oncontextmenu = noselect;
   function noselect() { return false; }
@@ -397,5 +403,5 @@ jQuery(document).ready(function () {
       setTimeout(function () {
           $(".copy_protect").removeClass("show_mesag");
       }, 1500);
-  });*/
+  });
 });
