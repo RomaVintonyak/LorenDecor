@@ -337,12 +337,14 @@ jQuery(document).ready(function () {
     docClose: false,
     nav: true,
     navText: ['&larr;', '&rarr;'],
-    captions: true,
+    /*title options*/
+    /*captions: true,
     captionDelay: 200,
     captionSelector: 'img',
     captionType: 'attr',
     captionPosition: 'bottom',
-    captionClass: 'gallery__img--title',
+    captionClass: 'gallery__img--title',*/
+    /*end title options*/
     enableKeyboard: true,
     alertError: true,
     alertErrorMessage: 'Image not found, next image will be loaded',
