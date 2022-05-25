@@ -2,7 +2,7 @@
 $(window).on("load", function () {
   "use script";
   var loader = $("#loader");
-  var timeDelay = 2500;
+  var timeDelay = 2000;
   setTimeout(function () {
     $("body").css({ "overflow-y": "scroll" });
     $("body").removeAttr("style");

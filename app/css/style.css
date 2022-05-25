@@ -647,6 +647,12 @@ a:focus {
     align-items: center;
 }
 
+@media (max-width: 768px) {
+    .intro__row {
+        overflow: hidden;
+    }
+}
+
 .intro__slider {
     position: absolute;
     right: 0;
