@@ -390,7 +390,7 @@ jQuery(document).ready(function () {
     ],
   });
   /**Copy protection*/
-  document.ondragstart = noselect;
+  /*document.ondragstart = noselect;
   document.onselectstart = noselect;
   document.oncontextmenu = noselect;
   function noselect() { return false; }
@@ -405,5 +405,5 @@ jQuery(document).ready(function () {
       setTimeout(function () {
           $(".copy_protect").removeClass("show_mesag");
       }, 1500);
-  });
+  });*/
 });
