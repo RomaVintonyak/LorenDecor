@@ -645,19 +645,14 @@ a:focus {
     position: relative;
     display: flex;
     align-items: center;
-}
-
-@media (max-width: 768px) {
-    .intro__row {
-        overflow: hidden;
-    }
+    overflow: hidden;
 }
 
 .intro__slider {
     position: absolute;
     right: 0;
     z-index: 2;
-    width: 92%;
+    width: 83%;
 }
 
 .intro__slider::before {
@@ -777,7 +772,7 @@ a:focus {
     font-weight: 700;
     letter-spacing: 0.8rem;
     color: #000000;
-    background: url("../img/intro/7.JPG") no-repeat center;
+    background: url("../img/intro/text_bg/text_bg.JPG") no-repeat center;
     background-size: cover;
     mix-blend-mode: lighten;
     -webkit-background-clip: text;
@@ -862,7 +857,7 @@ a:focus {
 .intro__scroll {
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: 1.5%;
     z-index: 5;
     margin-bottom: 1rem;
     width: 3.8rem;
@@ -3251,12 +3246,12 @@ body.lb-disable-scrolling {
     list-style-type: none;
     position: absolute;
     top: 0;
-    left: 100%;
+    right: 0;
     z-index: 2;
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -3322,10 +3317,10 @@ body.lb-disable-scrolling {
 
 @media (max-width: 1366px) {
     .intro-dots {
-        top: 102%;
+        top: 88%;
         flex-direction: row;
         height: 0;
-        left: calc(50% - 80px);
+        right: calc(50% - 100px);
     }
 }
 

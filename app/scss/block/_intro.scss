@@ -13,17 +13,13 @@
    position: relative;
    display: flex;
    align-items: center;
-   
-   //overflow: hidden;
-   @include mobile{
-      overflow: hidden;
-   }
+   overflow: hidden;
 }
 .intro__slider {
    position: absolute;
    right: 0;
    z-index: 2;
-   width: 92%;
+   width: 83%;
    &::before {
       content: "";
       width: 98.40%;
@@ -104,7 +100,7 @@
    font-weight: 700;
    letter-spacing: 0.8rem;
    color: $black;
-   background: url("../img/intro/7.JPG") no-repeat center;
+   background: url("../img/intro/text_bg/text_bg.JPG") no-repeat center;
    background-size: cover;
    mix-blend-mode: lighten;
    background-clip: text;
@@ -159,7 +155,7 @@
 .intro__scroll {
    position: absolute;
    bottom: 0;
-   left: 0;
+   left: 1.5%;
    z-index: 5;
    margin-bottom: 1rem;
    width: 3.8rem;
