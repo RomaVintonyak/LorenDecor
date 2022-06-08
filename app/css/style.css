@@ -774,9 +774,9 @@ a:focus {
     color: #000000;
     background: url("../img/intro/text_bg/text_bg.JPG") no-repeat center;
     background-size: cover;
-    mix-blend-mode: lighten;
     -webkit-background-clip: text;
     background-clip: text;
+    mix-blend-mode: lighten;
     -webkit-text-fill-color: transparent;
     margin-bottom: 2rem;
 }

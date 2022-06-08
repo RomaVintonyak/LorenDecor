@@ -6,6 +6,7 @@ var rename = require('gulp-rename');
 var cssbeautify = require('gulp-cssbeautify');
 var browserSync = require('browser-sync').create();
 var minify = require('gulp-minify');
+//var imagemin = require('gulp-imagemin');
 var del = require('del');
 const { src } = require('gulp');
 const { dest } = require('gulp');
@@ -57,6 +58,15 @@ function js_minify(done) {
     .pipe(gulp.dest('./app/js'))
   done();
 }
+/*img compress*/
+//function img_compress(){
+//  return gulp.src('./app/img/*/**')
+//        .pipe(imagemin())
+//        .pipe(gulp.dest('dist/img'))
+    //return gulp.src('app/img/*')
+    //      .pipe(imagemin())
+    //      .pipe(gulp.dest('dist/images'))
+//}
 /*start template*/
 function Sync(done) {
   browserSync.init({
@@ -104,6 +114,7 @@ exports.js_minify = js_minify;
 exports.Sync = Sync;
 exports.watchFiles = watchFiles;
 exports.clearDist = clearDist;
+//exports.img_compress = img_compress;
 
 /*build prejoct*/
 exports.build = series(clearDist, build);
