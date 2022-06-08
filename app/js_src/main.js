@@ -9,7 +9,7 @@ $(window).on("load", function () {
     loader.addClass("loader--done");
     //type js seting
     var typed = new Typed(".typed", {
-      strings: ["Wedding Decor Flowers"],
+      strings: typingArr,
       startDelay: 2000,
       typeSpeed: 120,
       backSpeed: 60,
