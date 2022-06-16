@@ -187,6 +187,7 @@ jQuery(document).ready(function () {
   });
   //contact page form validation
   var mailBtn = $("#sendMail");
+  var ajax_url = $("#contactForm").attr('data-action');
   mailBtn.on("click", function () {
     var name = $("#name").val().trim();
     var phone = $("#phone").val().trim(),
@@ -213,10 +214,15 @@ jQuery(document).ready(function () {
     }
     $("#errorText").text("");
     $.ajax({
-      url: '../php/mail.php',
+      url: ajax_url,
       type: 'POST',
       cache: false,
-      data: { 'name': name, 'phone': phone, 'email': email, 'message': message },
+      data: { 
+        action:     'sendForm', 
+        'name':      name, 
+        'phone':     phone, 
+        'email':     email, 
+        'message':   message },
       dataType: 'html',
       beforeSend: function () {
         mailBtn.prop("disabled", true);
@@ -230,7 +236,7 @@ jQuery(document).ready(function () {
         mailBtn.prop("disabled", false);
       }
     });
-  });
+  }); 
   //waves effect
   Waves.attach(".waves");
   Waves.init();
